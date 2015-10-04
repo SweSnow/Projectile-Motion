@@ -1,3 +1,7 @@
+<!--
+	This is the source code, in order to use the actual application use the following link: http://htmlpreview.github.io/?https://raw.githubusercontent.com/SweSnow/Projectile-Motion/master/index.html
+-->
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -253,7 +257,6 @@
 			var lastTheta = 0;
 
 			for (var theta = 0; theta < Math.PI / 4; theta += 0.01) {
-				var time = 0;
 				var length = v0*sin(2*theta)/(2*g) + (v0*cos(theta)*sqrt(v0*v0*sin(theta)*sin(theta)+2*g*y0))/(g);
 
 				if (length > bestLength) {
