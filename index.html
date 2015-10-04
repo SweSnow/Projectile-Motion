@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Projectile motion</title>
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
+
+	<style type="text/css">
+
+		* {
+			box-sizing: border-box;
+		}
+
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: 'Roboto', sans-serif;
+			font-weight: 400;
+		}
+
+		.container {
+			max-width: 880px;
+			margin-left: auto;
+			margin-right: auto;
+			padding-left: 48px;
+			padding-right: 48px;
+		}
+
+		.header {
+			font-size: 40px;
+			max-width: 700px;
+			margin-right: auto;
+			margin-left: auto;
+			text-align: center;
+			font-weight: 300;
+		}
+
+		.generators h2 {
+			font-weight: 300;
+			font-size: 30px;
+		}
+
+		.generators label {
+			display: block;
+			margin-bottom: 6px;
+		}
+
+		.generators .input {
+			width: 200px;
+		}
+
+		.generators .output {
+			font-family: monospace;
+			padding-left: 34px;
+		}
+
+		.generators input {
+			font-size: 16px;
+			font-family: 'Roboto', Arial;
+			border: 1px solid #969696;
+			padding: 8px;
+			width: 100%;
+			border-radius: 6px;
+			margin-bottom: 6px;
+			display: block;
+		}
+
+		.generators input[type="submit"] {
+			margin-top: 12px;
+			background-color: #FF9800;
+			color: #fff;
+			border: none;
+			padding: 8px;
+			width: 100%;
+			max-width: 200px;
+			transition: box-shadow 300ms;
+		}
+
+		.generators input[type="submit"]:hover {
+			box-shadow: 0px 4px 5px #aaa;
+		}
+
+		.left {
+			float: left;
+		}
+
+		.side-by-side {
+			width: 50%;
+		}
+
+
+	</style>
+
+</head>
+<body>
+	
+	<div class="container">
+		
+		<h1 class="header">
+			On the applicability of a mathematically derived numerical approximation to projectile motion
+		</h1>
+
+		<p>
+			This page generates input for the LaTeX component TikzPicture for use in the paper "On the applicability of a mathematically derived numerical approximation to projectile motion". 
+		</p>
+		
+		<section class="generators">
+			<article class="left optimal-angle side-by-side">
+				<h2>Optimal angle</h2>
+
+				<div class="left input">
+					<label>Initial velocity (m/s)</label>
+					<input id="optAngInitialVelocity" type="number" min="0"  value="10">
+					<label>From height (m)</label>
+					<input id="optAngFromHeight" type="number" min="0"  value="0">
+					<label>To height (m)</label>
+					<input id="optAngToHeight" type="number" min="1" value="20">
+					<label>Increment (m)</label>
+					<input id="optAngHeightIncrement"type="number" min="1" value="1">
+
+					<input type="submit" value="Calculate" onclick="calculateOptimalAngle()">
+				</div>
+
+				<div class="left output" id="optAngleOutput"></div>
+
+			</article>
+
+			<article class="left air-resistance side-by-side">
+				<h2>Air resistance</h2>
+
+				<div class="left input">
+					<label>Initial velocity (m/s)</label>
+					<input id="airResInitialVelocity" type="number" min="0"  value="10">
+					<label>Launch angle (deg)</label>
+					<input id="airResLaunchAngle" type="number" min="0" max="90"  value="45">
+					<label>Air density (kg/m<sup>3</sup>)</label>
+					<input id="airResAirDensity" type="number" min="1" value="1.225">
+					<label>Frontal area (m<sup>2</sup>)</label>
+					<input id="airResFrontalArea" type="number" min="0" value="1">
+					<label>Coefficient of drag <a target="_blank" href="https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/14ilf1l.svg/220px-14ilf1l.svg.png">(?)</a></label>
+					<input id="airResDragCoefficient" type="number" min="0" value="0.47">
+
+					<input type="submit" value="Calculate" onclick="calculateAirResistance()">
+				</div>
+
+				<div class="left output" id="airResOutput"></div>
+			</article>
+		</section>
+
+	</div>
+
+	<script type="text/javascript">
+
+		function sin(x) {return Math.sin(x)};
+		function cos(x) {return Math.cos(x)};
+		function sqrt(x) {return Math.sqrt(x)};
+
+		function $(selector) {
+			return document.querySelector(selector);
+		}
+
+		var g = 9.82;
+
+		calculateOptimalAngle();
+		calculateAirResistance();
+
+		function calculateOptimalAngle() {
+			$('#optAngleOutput').innerHTML = generateBestAngleFromHeightGraph(
+				$('#optAngInitialVelocity').value,
+				$('#optAngFromHeight').value,
+				$('#optAngToHeight').value,
+				$('#optAngHeightIncrement').value
+			);
+		}
+
+		function calculateAirResistance() {
+			$('#airResOutput').innerHTML = generatePlotWithAirresistance(
+				$('#airResInitialVelocity').value,
+				$('#airResLaunchAngle').value,
+				$('#airResAirDensity').value,
+				$('#airResFrontalArea').value,
+				$('#airResDragCoefficient').value
+			);
+		}
+
+		function generatePlotWithAirresistance(initialVelocity, angle, density, frontArea, drag) {
+
+			var x = 0;
+			var y = 0;
+
+			var v0 = parseFloat(initialVelocity);
+			var theta = parseFloat(angle) * Math.PI / 180;
+
+			var vx = cos(theta) * v0;
+			var vy = sin(theta) * v0;
+
+			var dt = 0.001;
+
+			var rho = parseFloat(density);
+			var area = parseFloat(frontArea);
+			var dragCoefficient = parseFloat(drag);
+
+			var i = 0;
+
+			var res = '';
+
+			while (true) {
+				
+				var dragVelocity = getAirResistance(rho, area, dragCoefficient, vx, vy, dt);
+
+				vx += dragVelocity.x;
+				vy += dragVelocity.y;
+
+				vy += -g*dt;
+
+				x += vx * dt;
+				y += vy * dt;
+
+				if (y < 0) {
+					res += ('(' + x.toFixed(4) + ', ' + y.toFixed(4) + ')<br>');
+					break;
+				}
+				if ((i % 40) == 0) {
+					res += ('(' + x.toFixed(4) + ', ' + y.toFixed(4) + ')<br>');
+				}
+
+				i++;
+			}
+
+			return res;
+		}
+
+
+
+		function generateBestAngleFromHeightGraph(velocity, fromHeight, toHeight, heightIncrement) {
+			var res = '';
+
+			var v0 = parseInt(velocity);
+			var ymin = parseInt(fromHeight);
+			var ymax = parseInt(toHeight);
+			var yplus = parseInt(heightIncrement);
+
+			for (var i = parseInt(ymin); i <= ymax; i += yplus) {
+				res += ('(' + i + ', ' + (bestAngleFromStartingHeight(v0, i) * 180 / Math.PI).toFixed(4) + ')<br>');
+			}
+
+			return res;
+		}
+
+		function bestAngleFromStartingHeight(v0, y0) {
+			var bestLength = 0;
+			var bestAngle = 0;
+			var lastTheta = 0;
+
+			for (var theta = 0; theta < Math.PI / 4; theta += 0.01) {
+				var time = 0;
+				var length = v0*sin(2*theta)/(2*g) + (v0*cos(theta)*sqrt(v0*v0*sin(theta)*sin(theta)+2*g*y0))/(g);
+
+				if (length > bestLength) {
+					bestLength = length;
+					bestAngle = theta;
+				}
+			}
+
+			return bestAngle;
+		}
+
+		function getAirResistance(rho, area, dragCoefficient, velocityX, velocityY, deltaT) {
+			return new Vec2(
+				-0.5 * rho * area * dragCoefficient * velocityX * velocityX * deltaT,
+				-0.5 * rho * area * dragCoefficient * velocityY * velocityY * deltaT
+			);
+		}
+
+		function Vec2(x, y) {
+			this.x = x;
+			this.y = y;
+		}
+
+		function bestAngleFromStartingHeight(v0, y0) {
+			var bestLength = 0;
+			var bestAngle = 0;
+			var lastTheta = 0;
+
+			for (var theta = 0; theta < Math.PI / 4; theta += 0.0001) {
+				var time = 0;
+				var length = v0*sin(2*theta)/(2*g) + (v0*cos(theta)*sqrt(v0*v0*sin(theta)*sin(theta)+2*g*y0))/(g);
+
+				if (length > bestLength) {
+					bestLength = length;
+					bestAngle = theta;
+				}
+			}
+
+			return bestAngle;
+		}
+
+		function x(a, v, t) {
+			return v * Math.sin(a) * t;
+		}
+
+		function y(a, v, t) {
+			return v * Math.cos(a) * t - 0.5 * g * t * t;
+		}
+	</script>
+
+</body>
+</html>
