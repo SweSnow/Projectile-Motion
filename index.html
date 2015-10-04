@@ -54,6 +54,17 @@
 			padding-left: 34px;
 		}
 
+		.generators .output .copy {
+			text-align: center;
+			border-radius: 4px;
+			padding: 8px;
+			color: #fff;
+			font-size: 20px;
+			margin-top: 10px;
+			cursor: pointer;
+			background-color: #FF5722
+		}
+
 		.generators input {
 			font-size: 16px;
 			font-family: 'Roboto', Arial;
@@ -121,7 +132,7 @@
 					<input type="submit" value="Calculate" onclick="calculateOptimalAngle()">
 				</div>
 
-				<div class="left output" id="optAngleOutput"></div>
+				<div class="left output" id="optAngOutput"></div>
 
 			</article>
 
@@ -169,16 +180,22 @@
 		calculateAirResistance();
 
 		function calculateOptimalAngle() {
-			$('#optAngleOutput').innerHTML = generateBestAngleFromHeightGraph(
+			var text = generateBestAngleFromHeightGraph(
 				$('#optAngInitialVelocity').value,
 				$('#optAngFromHeight').value,
 				$('#optAngToHeight').value,
 				$('#optAngHeightIncrement').value
 			);
+
+			var buttonText = '<div class="copy" onclick="copy(this)" data-values="\\addplot coordinates {';
+			buttonText += text.replace('<br>', '');
+			buttonText += '};">Copy</div>';
+
+			$('#optAngOutput').innerHTML = text + buttonText;
 		}
 
 		function calculateAirResistance() {
-			$('#airResOutput').innerHTML = generatePlotWithAirresistance(
+			var text = generatePlotWithAirresistance(
 				$('#airResInitialVelocity').value,
 				$('#airResLaunchAngle').value,
 				$('#airResAirDensity').value,
@@ -187,6 +204,13 @@
 				$('#airResMass').value,
 				$('#airResSampleFreq').value
 			);
+
+			var buttonText = '<div class="copy" onclick="copy(this)" data-values="\\addplot coordinates {';
+			buttonText += text.replace('<br>', '');
+			buttonText += '};">Copy</div>';
+
+			$('#airResOutput').innerHTML = text + buttonText;
+
 		}
 
 		function generatePlotWithAirresistance(initialVelocity, angle, density, frontArea, drag, mass, samples) {
@@ -301,6 +325,10 @@
 			}
 
 			return bestAngle;
+		}
+
+		function copy(element) {
+			window.prompt("Copy to clipboard: Ctrl+C, Enter", element.dataset.values);
 		}
 
 		function x(a, v, t) {
