@@ -62,7 +62,12 @@
 			font-size: 20px;
 			margin-top: 10px;
 			cursor: pointer;
-			background-color: #FF5722
+			background-color: #FF5722;
+			transition: box-shadow 200ms;
+		}
+
+		.generators .output .copy:hover {
+			box-shadow: 0px 4px 5px #aaa;
 		}
 
 		.generators input {
@@ -84,7 +89,8 @@
 			padding: 8px;
 			width: 100%;
 			max-width: 200px;
-			transition: box-shadow 300ms;
+			cursor: pointer;
+			transition: box-shadow 200ms;
 		}
 
 		.generators input[type="submit"]:hover {
