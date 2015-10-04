@@ -194,7 +194,7 @@
 			);
 
 			var buttonText = '<div class="copy" onclick="copy(this)" data-values="\\addplot coordinates {';
-			buttonText += text.replace('<br>', '');
+			buttonText += text.replace(/\<br\>/g," ");
 			buttonText += '};">Copy</div>';
 
 			$('#optAngOutput').innerHTML = text + buttonText;
@@ -212,7 +212,7 @@
 			);
 
 			var buttonText = '<div class="copy" onclick="copy(this)" data-values="\\addplot coordinates {';
-			buttonText += text.replace('<br>', '');
+			buttonText += text.replace(/\<br\>/g," ");
 			buttonText += '};">Copy</div>';
 
 			$('#airResOutput').innerHTML = text + buttonText;
