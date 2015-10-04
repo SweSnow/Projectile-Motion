@@ -130,9 +130,11 @@
 
 				<div class="left input">
 					<label>Initial velocity (m/s)</label>
-					<input id="airResInitialVelocity" type="number" min="0"  value="10">
+					<input id="airResInitialVelocity" type="number" min="0" value="10">
 					<label>Launch angle (deg)</label>
-					<input id="airResLaunchAngle" type="number" min="0" max="90"  value="45">
+					<input id="airResLaunchAngle" type="number" min="0" max="90" value="45">
+					<label>Mass (kg)</label>
+					<input id="airResMass" type="number" min="0" value="1">
 					<label>Air density (kg/m<sup>3</sup>)</label>
 					<input id="airResAirDensity" type="number" min="1" value="1.225">
 					<label>Frontal area (m<sup>2</sup>)</label>
@@ -179,17 +181,19 @@
 				$('#airResLaunchAngle').value,
 				$('#airResAirDensity').value,
 				$('#airResFrontalArea').value,
-				$('#airResDragCoefficient').value
+				$('#airResDragCoefficient').value,
+				$('#airResMass').value
 			);
 		}
 
-		function generatePlotWithAirresistance(initialVelocity, angle, density, frontArea, drag) {
+		function generatePlotWithAirresistance(initialVelocity, angle, density, frontArea, drag, mass) {
 
 			var x = 0;
 			var y = 0;
 
 			var v0 = parseFloat(initialVelocity);
 			var theta = parseFloat(angle) * Math.PI / 180;
+			var m = parseFloat(mass);
 
 			var vx = cos(theta) * v0;
 			var vy = sin(theta) * v0;
@@ -206,7 +210,7 @@
 
 			while (true) {
 				
-				var dragVelocity = getAirResistance(rho, area, dragCoefficient, vx, vy, dt);
+				var dragVelocity = getAirResistance(rho, area, dragCoefficient, vx, vy, dt, m);
 
 				vx += dragVelocity.x;
 				vy += dragVelocity.y;
@@ -264,10 +268,10 @@
 			return bestAngle;
 		}
 
-		function getAirResistance(rho, area, dragCoefficient, velocityX, velocityY, deltaT) {
+		function getAirResistance(rho, area, dragCoefficient, velocityX, velocityY, deltaT, mass) {
 			return new Vec2(
-				-0.5 * rho * area * dragCoefficient * velocityX * velocityX * deltaT,
-				-0.5 * rho * area * dragCoefficient * velocityY * velocityY * deltaT
+				-0.5 * rho * area * dragCoefficient * velocityX * velocityX * deltaT / mass,
+				-0.5 * rho * area * dragCoefficient * velocityY * velocityY * deltaT / mass
 			);
 		}
 
