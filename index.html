@@ -141,6 +141,8 @@
 					<input id="airResFrontalArea" type="number" min="0" value="1">
 					<label>Coefficient of drag <a target="_blank" href="https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/14ilf1l.svg/220px-14ilf1l.svg.png">(?)</a></label>
 					<input id="airResDragCoefficient" type="number" min="0" value="0.47">
+					<label>Sample frequency</label>
+					<input id="airResSampleFreq" type="number" min="1" value="100">
 
 					<input type="submit" value="Calculate" onclick="calculateAirResistance()">
 				</div>
@@ -182,11 +184,15 @@
 				$('#airResAirDensity').value,
 				$('#airResFrontalArea').value,
 				$('#airResDragCoefficient').value,
-				$('#airResMass').value
+				$('#airResMass').value,
+				$('#airResSampleFreq').value
 			);
 		}
 
-		function generatePlotWithAirresistance(initialVelocity, angle, density, frontArea, drag, mass) {
+		function generatePlotWithAirresistance(initialVelocity, angle, density, frontArea, drag, mass, samples) {
+
+			var sampleFrequency = 40 / (parseInt(samples) / 100);
+			console.log(sampleFrequency);
 
 			var x = 0;
 			var y = 0;
@@ -224,7 +230,7 @@
 					res += ('(' + x.toFixed(4) + ', ' + y.toFixed(4) + ')<br>');
 					break;
 				}
-				if ((i % 40) == 0) {
+				if ((i % sampleFrequency) == 0) {
 					res += ('(' + x.toFixed(4) + ', ' + y.toFixed(4) + ')<br>');
 				}
 
