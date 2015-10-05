@@ -305,7 +305,7 @@
 			var lastTheta = 0;
 
 			for (var theta = 0; theta < Math.PI / 4; theta += 0.01) {
-				var length = v0*sin(2*theta)/(2*g) + (v0*cos(theta)*sqrt(v0*v0*sin(theta)*sin(theta)+2*g*y0))/(g);
+				var length = (v0*v0*cos(theta)/g)*(sin(theta)+sqrt(sin(theta)*sin(theta)+(2*g*y0)/(v^2)));
 
 				if (length > bestLength) {
 					bestLength = length;
