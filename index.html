@@ -257,6 +257,8 @@
 			var res = '';
 
 			while (true) {
+
+				console.log(vy);
 				
 				var dragVelocity = getAirResistance(rho, area, dragCoefficient, vx, vy, dt, m);
 
@@ -304,8 +306,9 @@
 			var bestAngle = 0;
 			var lastTheta = 0;
 
-			for (var theta = 0; theta < Math.PI / 4; theta += 0.01) {
-				var length = (v0*v0*cos(theta)/g)*(sin(theta)+sqrt(sin(theta)*sin(theta)+(2*g*y0)/(v^2)));
+			for (var theta = 0; theta < Math.PI / 4; theta += 0.0001) {
+				var time = 0;
+				var length = v0*sin(2*theta)/(2*g) + (v0*cos(theta)*sqrt(v0*v0*sin(theta)*sin(theta)+2*g*y0))/(g);
 
 				if (length > bestLength) {
 					bestLength = length;
@@ -328,23 +331,7 @@
 			this.y = y;
 		}
 
-		function bestAngleFromStartingHeight(v0, y0) {
-			var bestLength = 0;
-			var bestAngle = 0;
-			var lastTheta = 0;
 
-			for (var theta = 0; theta < Math.PI / 4; theta += 0.0001) {
-				var time = 0;
-				var length = v0*sin(2*theta)/(2*g) + (v0*cos(theta)*sqrt(v0*v0*sin(theta)*sin(theta)+2*g*y0))/(g);
-
-				if (length > bestLength) {
-					bestLength = length;
-					bestAngle = theta;
-				}
-			}
-
-			return bestAngle;
-		}
 
 		function copy(element) {
 			window.prompt("Copy to clipboard: Ctrl+C, Enter", element.dataset.values);
