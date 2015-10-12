@@ -14,7 +14,6 @@ function $(selector) {
 	return document.querySelector(selector);
 }
 
-
 /*
 	Returns an array with the results:
 		[0]: LaTeX plot
