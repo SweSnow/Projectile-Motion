@@ -1,3 +1,5 @@
+'use strict';
+
 calculateOptimalAngle();
 calculateAirResistance();
 
@@ -30,7 +32,8 @@ function calculateAirResistance() {
 
 	var info 	= 'Air time: ' + airResOutput[1] + 's<br>'
 				+ 'Distance: ' + airResOutput[2] + 'm<br>'
-				+ 'Max height: ' + airResOutput[3] + 'm<br><br>';
+				+ 'Parabola length: ' + airResOutput[3] + 'm<br>'
+				+ 'Max height: ' + airResOutput[4] + 'm<br><br>';
 
 	
 	var text = '';
@@ -48,4 +51,8 @@ function calculateAirResistance() {
 
 function copy(element) {
 	window.prompt("Copy to clipboard: Ctrl+C, Enter", element.dataset.values);
+}
+
+function $(selector) {
+	return document.querySelector(selector);
 }

@@ -1,4 +1,6 @@
-var sin = Math.sin, cos = Math.cos, sqrt = Math.sqrt, sign = Math.sign, pi = Math.PI;
+'use strict';
+
+var sin = Math.sin, cos = Math.cos, sqrt = Math.sqrt, sign = Math.sign, pow = Math.pow, pi = Math.PI;
 
 function rad(x) {
 	return x * pi / 180;
@@ -10,18 +12,16 @@ function deg() {
 
 var g = 9.82;
 
-function $(selector) {
-	return document.querySelector(selector);
-}
-
 /*
 	Returns an array with the results:
 		[0]: LaTeX plot
-		[1]: Time spent in air
+		[1]: Air time
 		[2]: Distance
-		[3]: Max height
+		[3]: Parabola length
+		[4]: Max height
 	
 */
+
 function getAirResistanceData(initialVelocity, angle, density, frontArea, drag, mass, initialHeight, samples) {
 
 	var sampleFrequency = 40 / (samples / 100);
@@ -45,11 +45,15 @@ function getAirResistanceData(initialVelocity, angle, density, frontArea, drag, 
 	var dragCoefficient = drag;
 
 	var i = 1;
+	var length = 0;
 
 	var res = [[x.toFixed(4), y.toFixed(4)]];
 
 	while (true) {		
 		var dragVelocity = getAirResistance(rho, area, dragCoefficient, vx, vy, dt, m);
+
+		var x0 = x;
+		var y0 = y;
 
 		vx += dragVelocity.x;
 		vy += dragVelocity.y;
@@ -61,7 +65,9 @@ function getAirResistanceData(initialVelocity, angle, density, frontArea, drag, 
 
 		if (y > maxY) {
 			maxY = y;
-		} 
+		}
+
+		length += sqrt(pow(x - x0, 2) + pow(y - y0, 2))
 
 		if (y < 0) {
 			res.push([x.toFixed(4), y.toFixed(4)]);
@@ -75,7 +81,7 @@ function getAirResistanceData(initialVelocity, angle, density, frontArea, drag, 
 		i++;
 	}
 
-	return [res, t.toFixed(2), x.toFixed(4), maxY.toFixed(4)];
+	return [res, t.toFixed(2), x.toFixed(4), length.toFixed(4), maxY.toFixed(4)];
 }
 
 function generateBestAngleFromHeightGraph(velocity, fromHeight, toHeight, heightIncrement) {
