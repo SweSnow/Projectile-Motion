@@ -19,6 +19,8 @@ var g = 9.82;
 		[2]: Distance
 		[3]: Parabola length
 		[4]: Max height
+		[5]: Initial energy
+		[6]: Final energy
 	
 */
 
@@ -81,7 +83,10 @@ function getAirResistanceData(initialVelocity, angle, density, frontArea, drag, 
 		i++;
 	}
 
-	return [res, t.toFixed(2), x.toFixed(4), length.toFixed(4), maxY.toFixed(4)];
+	var initialEnergy = 0.5 * initialVelocity * initialVelocity * mass + mass * g * initialHeight;
+	var finalEnergy = 0.5 * (pow(vx ,2) + pow(vy, 2)) * mass;
+
+	return [res, t.toFixed(2), x.toFixed(4), length.toFixed(4), maxY.toFixed(4), initialEnergy.toFixed(4), finalEnergy.toFixed(4)];
 }
 
 function generateBestAngleFromHeightGraph(velocity, fromHeight, toHeight, heightIncrement) {

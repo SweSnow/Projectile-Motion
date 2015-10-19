@@ -30,10 +30,12 @@ function calculateAirResistance() {
 		parseFloat($('#airResSampleFreq').value)
 	);
 
-	var info 	= 'Air time: ' + airResOutput[1] + 's<br>'
-				+ 'Distance: ' + airResOutput[2] + 'm<br>'
-				+ 'Parabola length: ' + airResOutput[3] + 'm<br>'
-				+ 'Max height: ' + airResOutput[4] + 'm<br><br>';
+	var info 	= 'Air time: ' + airResOutput[1] + ' s<br>'
+				+ 'Distance: ' + airResOutput[2] + ' m<br>'
+				+ 'Parabola length: ' + airResOutput[3] + ' m<br>'
+				+ 'Max height: ' + airResOutput[4] + ' m<br>'
+				+ 'Initial energy: ' + airResOutput[5] + ' J<br>'
+				+ 'Final energy: ' + airResOutput[6] + ' J<br><br>';
 
 	
 	var text = '';
