@@ -21,10 +21,10 @@ var g = 9.82;
 		[4]: Max height
 		[5]: Initial energy
 		[6]: Final energy
-	
+		[7]: Reach vs vacuum
 */
 
-function getAirResistanceData(initialVelocity, angle, density, frontArea, drag, mass, initialHeight, samples) {
+function getAirResistanceData(initialVelocity, angle, density, frontArea, drag, mass, initialHeight, samples, compare) {
 
 	var sampleFrequency = 40 / (samples / 100);
 
@@ -81,12 +81,31 @@ function getAirResistanceData(initialVelocity, angle, density, frontArea, drag, 
 
 		t += dt;
 		i++;
+
+		if (i > 10000) {
+			alert(y);
+		}
 	}
 
 	var initialEnergy = 0.5 * initialVelocity * initialVelocity * mass + mass * g * initialHeight;
 	var finalEnergy = 0.5 * (pow(vx ,2) + pow(vy, 2)) * mass;
 
-	return [res, t.toFixed(2), x.toFixed(4), length.toFixed(4), maxY.toFixed(4), initialEnergy.toFixed(4), finalEnergy.toFixed(4)];
+	var rangeCompare = 0;
+
+	if (compare) {
+		var vRange = getAirResistanceData(initialVelocity, angle, 0, 0, 0, 1, initialHeight, 0, false)[2];
+		rangeCompare = ((length/vRange) * 100).toFixed(2);
+	}
+
+	return [
+	res,
+	t.toFixed(2),
+	x.toFixed(4),
+	length.toFixed(4),
+	maxY.toFixed(4),
+	initialEnergy.toFixed(4),
+	finalEnergy.toFixed(4),
+	rangeCompare];
 }
 
 function generateBestAngleFromHeightGraph(velocity, fromHeight, toHeight, heightIncrement) {

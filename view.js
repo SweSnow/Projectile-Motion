@@ -27,7 +27,8 @@ function calculateAirResistance() {
 		parseFloat($('#airResDragCoefficient').value),
 		parseFloat($('#airResMass').value),
 		parseFloat($('#airResInitialHeight').value),
-		parseFloat($('#airResSampleFreq').value)
+		parseFloat($('#airResSampleFreq').value),
+		true
 	);
 
 	var info 	= 'Air time: ' + airResOutput[1] + ' s<br>'
@@ -35,7 +36,8 @@ function calculateAirResistance() {
 				+ 'Parabola length: ' + airResOutput[3] + ' m<br>'
 				+ 'Max height: ' + airResOutput[4] + ' m<br>'
 				+ 'Initial energy: ' + airResOutput[5] + ' J<br>'
-				+ 'Final energy: ' + airResOutput[6] + ' J<br><br>';
+				+ 'Final energy: ' + airResOutput[6] + ' J<br>'
+				+ 'Reach vs vacuum ' + airResOutput[7] + ' %<br><br>';
 
 	
 	var text = '';
