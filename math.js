@@ -81,10 +81,6 @@ function getAirResistanceData(initialVelocity, angle, density, frontArea, drag, 
 
 		t += dt;
 		i++;
-
-		if (i > 10000) {
-			alert(y);
-		}
 	}
 
 	var initialEnergy = 0.5 * initialVelocity * initialVelocity * mass + mass * g * initialHeight;
@@ -94,7 +90,7 @@ function getAirResistanceData(initialVelocity, angle, density, frontArea, drag, 
 
 	if (compare) {
 		var vRange = getAirResistanceData(initialVelocity, angle, 0, 0, 0, 1, initialHeight, 0, false)[2];
-		rangeCompare = ((length/vRange) * 100).toFixed(2);
+		rangeCompare = ((x/vRange) * 100).toFixed(2);
 	}
 
 	return [
