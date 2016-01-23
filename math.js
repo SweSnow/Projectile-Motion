@@ -140,7 +140,7 @@ function bestAngleFromStartingHeight(v0, y0) {
 function getAirResistance(rho, area, dragCoefficient, velocityX, velocityY, deltaT, mass) {
 	return new Vec2(
 		-0.5 * rho * area * dragCoefficient * velocityX * velocityX * sign(velocityX) * deltaT / mass,
-		-0.5 * rho * area * dragCoefficient * velocityY * velocityY * sign(velocityX) * deltaT / mass
+		-0.5 * rho * area * dragCoefficient * velocityY * velocityY * sign(velocityY) * deltaT / mass
 	);
 }
 
