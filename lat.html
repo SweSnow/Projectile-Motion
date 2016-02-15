@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>LAT</title>
+</head>
+<body>
+	
+	<script type="text/javascript">
+		var theta = Math.PI/8;
+		var v0 = 10;
+		var u0 = v0 * Math.cos(theta);
+		var w0 = v0 * Math.sin(theta);
+		var g = 9.82;
+		var k = 0.15;
+		var omega = Math.sqrt(g*k);
+		var a = k * u0;
+		var y0 = 0;
+		var x0 = 0;
+		var phi = Math.atan(w0 * Math.sqrt(k/g));
+
+		function mu(t) {
+			return (a * t) + 1;
+		}
+
+		var t = 0;
+		var lastHeight = y0;
+		var dt = 0.02;
+
+		var res = '\\addplot[mark = none] coordinates {';
+
+		while (lastHeight >= 0) {
+
+			var x = Math.log(mu(t))/k;
+			var y = (g/(2*a)+w0)*Math.log(mu(t))/a -(g*t)/(2*a) - (g * t*t)/(4) +  y0;
+			res += '(' + x + ', ' + y + ') ';
+
+			lastHeight = y;
+
+			t += dt;
+		} 
+
+		res += '};';
+
+		document.write(res);
+	</script>
+
+</body>
+</html>

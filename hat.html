@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>HAT</title>
+
+	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/mathjs/2.7.0/math.min.js"></script>
+</head>
+<body>
+	
+	<script type="text/javascript">
+		var theta = 2*Math.PI/5;
+		var v0 = 10;
+		var u0 = v0 * Math.cos(theta);
+		var w0 = v0 * Math.sin(theta);
+		var g = 9.82;
+		var k = 0.15;
+		var omega = Math.sqrt(g*k);
+		var a = k * u0;
+		var y0 = 0;
+		var x0 = 0;
+		var phi = Math.atan(w0 * Math.sqrt(k/g));
+
+		function mu(t) {
+			return (a * t) + 1;
+		}
+
+		function yp(t) {
+			return (Math.log((Math.cos(phi-omega*t))/(Math.cos(phi))))/(k);
+		}
+
+		function xp(t) {
+			return (-u0*Math.cos(phi)/omega)*Math.log((Math.tan(phi-omega*t)+math.sec(phi-omega*t))/(Math.tan(phi)+math.sec(phi)));
+		}
+
+		function ym(t) {
+			return (Math.log(1/(Math.cos(phi)*Math.cosh(omega*(t-(phi/omega))))))/(k);
+		}
+
+		function xm(t) {
+			return (u0*Math.cos(phi)*(Math.atan(Math.sinh(omega*(t-(phi/omega))))-Math.log(1/(Math.tan(phi)+math.sec(phi)))))/(omega);
+		}
+
+		var t = 0;
+		var lastHeight = y0;
+		var dt = 0.05;
+
+		var res = '\\addplot[mark = none] coordinates {';
+
+		while (lastHeight >= 0) {
+
+			var x, y;
+
+			if (t < phi/omega) {
+				x = xp(t);
+				y = yp(t);
+			} else {
+				x = xm(t);
+				y = ym(t);
+			}
+
+			res += '(' + x + ', ' + y + ') ';
+
+			lastHeight = y;
+
+			t += dt;
+		} 
+
+		res += '};';
+
+		document.write(res);
+	</script>
+
+</body>
+</html>
