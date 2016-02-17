@@ -25,15 +25,15 @@
 
 		var t = 0;
 		var lastHeight = y0;
-		var dt = 0.02;
+		var dt = 0.002;
 
-		var res = '\\addplot[mark = none] coordinates {';
+		var res = '\\addplot[mark = none, color = blue] coordinates {';
 
 		while (lastHeight >= 0) {
 
 			var x = Math.log(mu(t))/k;
 			var y = (g/(2*a)+w0)*Math.log(mu(t))/a -(g*t)/(2*a) - (g * t*t)/(4) +  y0;
-			res += '(' + x + ', ' + y + ') ';
+			res += '(' + x.toFixed(3) + ', ' + y.toFixed(3) + ') ';
 
 			lastHeight = y;
 

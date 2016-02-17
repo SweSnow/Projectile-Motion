@@ -40,9 +40,9 @@
 
 		var t = 0;
 		var lastHeight = y0;
-		var dt = 0.05;
+		var dt = 0.005;
 
-		var res = '\\addplot[mark = none] coordinates {';
+		var res = '\\addplot[mark = none, color = blue] coordinates {';
 
 		while (lastHeight >= 0) {
 
@@ -55,7 +55,7 @@
 				y = ym(t);
 			}
 
-			res += '(' + x + ', ' + y + ') ';
+			res += '(' + x.toFixed(3) + ', ' + y.toFixed(3) + ') ';
 
 			lastHeight = y;
 
