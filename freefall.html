@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Free fall</title>
+
+	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/mathjs/2.7.0/math.min.js"></script>
+</head>
+<body>
+
+<script type="text/javascript">
+
+	var k = 0.00313;
+	var g = 9.82;
+	var y0 = 3;
+
+	function yRes(t) {
+		return (-1/k)*Math.log(Math.cosh(Math.sqrt(g*k)*t)) + y0;
+	}
+
+	function yNorm(t) {
+		return y0 - 0.5*g*t*t;
+	}
+
+	var res = '\\addplot[mark = none, color = blue] coordinates {';
+
+	var t = 0;
+	var dt = 0.01;
+
+	var y = y0;
+
+	while(y > 0) {
+		y = yRes(t);
+		res += '(' + t.toFixed(3) + ', ' + y.toFixed(3) + ') ';
+		t += dt;
+	}
+
+	res += '};';
+
+	document.write(res);
+
+</script>
+
+</body>
+</html>
