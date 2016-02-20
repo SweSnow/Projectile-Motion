@@ -1,0 +1,65 @@
+\contentsline {title}{On the properties of projectile motion and quadratic air resistance}{1}{}
+\contentsline {abstract}{Abstract}{1}{}
+\tocdepth@munge 
+\contentsline {section}{\numberline {}Contents}{1}{}
+\tocdepth@restore 
+\contentsline {section}{\numberline {1}Introduction}{1}{}
+\contentsline {section}{\numberline {2}Trajectory}{2}{}
+\contentsline {subsection}{\numberline {2.1}Acceleration}{2}{}
+\contentsline {subsection}{\numberline {2.2}Velocity}{2}{}
+\contentsline {subsection}{\numberline {2.3}Position}{2}{}
+\contentsline {subsection}{\numberline {2.4}Parabola}{2}{}
+\contentsline {section}{\numberline {3}Properties of a projectile parabola}{3}{}
+\contentsline {subsection}{\numberline {3.1}Time to highest point}{3}{}
+\contentsline {subsection}{\numberline {3.2}Highest point}{3}{}
+\contentsline {subsection}{\numberline {3.3}Range of projectile}{3}{}
+\contentsline {subsection}{\numberline {3.4}Optimal angle for maximum range}{3}{}
+\contentsline {subsection}{\numberline {3.5}Velocity at a given time}{3}{}
+\contentsline {subsection}{\numberline {3.6}Angle of impact}{4}{}
+\contentsline {section}{\numberline {4}Choosing initial values to match result values}{4}{}
+\contentsline {subsection}{\numberline {4.1}Delimitations}{4}{}
+\contentsline {subsection}{\numberline {4.2}Specific projectile range}{4}{}
+\contentsline {subsection}{\numberline {4.3}Hitting a specific coordinate}{4}{}
+\contentsline {subsubsection}{\numberline {4.3.3}Predetermined speed}{4}{}
+\contentsline {subsubsection}{\numberline {4.3.3}Predetermined angle}{5}{}
+\contentsline {section}{\numberline {5}Longest parabola starting at height}{5}{}
+\contentsline {subsection}{\numberline {5.1}Expression for range}{5}{}
+\contentsline {subsection}{\numberline {5.2}Algorithm}{6}{}
+\contentsline {section}{\numberline {6}Computational approach to air resistance}{6}{}
+\contentsline {subsection}{\numberline {6.1}Change at every time interval}{6}{}
+\contentsline {subsection}{\numberline {6.2}Algorithm}{7}{}
+\contentsline {section}{\numberline {7}Analytical solution to one-dimensional air resistance}{8}{}
+\contentsline {subsection}{\numberline {7.1}Derivation}{8}{}
+\contentsline {subsubsection}{\numberline {7.1.1}Position as a function of time}{8}{}
+\contentsline {subsubsection}{\numberline {7.1.1}Determining the duration of the fall}{9}{}
+\contentsline {subsubsection}{\numberline {7.1.1}Terminal velocity}{9}{}
+\contentsline {subsection}{\numberline {7.2}Plots}{9}{}
+\contentsline {subsubsection}{\numberline {7.2.2}Examples}{9}{}
+\contentsline {subsubsection}{\numberline {7.2.2}Analysis}{10}{}
+\contentsline {section}{\numberline {8}Analytical approximations to two-dimensional air resistance}{10}{}
+\contentsline {subsection}{\numberline {8.1}Introduction}{10}{}
+\contentsline {subsection}{\numberline {8.2}Low Angle Trajectory approximation}{10}{}
+\contentsline {subsubsection}{\numberline {8.2.2}Differential equations of motion}{10}{}
+\contentsline {subsubsection}{\numberline {8.2.2}Velocity}{10}{}
+\contentsline {subsubsection}{\numberline {8.2.2}Position}{11}{}
+\contentsline {subsubsection}{\numberline {8.2.2}Equations of motion}{11}{}
+\contentsline {subsection}{\numberline {8.3}High Angle Trajectory approximation}{11}{}
+\contentsline {subsubsection}{\numberline {8.3.3}Differential equations of motion}{11}{}
+\contentsline {subsubsection}{\numberline {8.3.3}Ascending velocity}{12}{}
+\contentsline {subsubsection}{\numberline {8.3.3}Ascending position}{12}{}
+\contentsline {subsubsection}{\numberline {8.3.3}Descending velocity}{12}{}
+\contentsline {subsubsection}{\numberline {8.3.3}Descending position}{13}{}
+\contentsline {subsubsection}{\numberline {8.3.3}Equations of motion}{13}{}
+\contentsline {subsection}{\numberline {8.4}Split Angle Trajectory approximation}{14}{}
+\contentsline {subsubsection}{\numberline {8.4.4}Differential equations of motion}{14}{}
+\contentsline {subsubsection}{\numberline {8.4.4}Equations of motion}{14}{}
+\contentsline {subsection}{\numberline {8.5}Plots}{14}{}
+\contentsline {subsubsection}{\numberline {8.5.5}LAT}{14}{}
+\contentsline {subsubsection}{\numberline {8.5.5}HAT}{14}{}
+\contentsline {subsubsection}{\numberline {8.5.5}SAT}{14}{}
+\contentsline {section}{\numberline {9}Experiment}{14}{}
+\contentsline {subsection}{\numberline {9.1}Setup}{14}{}
+\contentsline {subsection}{\numberline {9.2}Results}{14}{}
+\contentsline {subsection}{\numberline {9.3}Analysis}{15}{}
+\contentsline {section}{\numberline {10}Conculsions}{15}{}
+\contentsline {section}{\numberline {}Further reading}{15}{}
