@@ -175,8 +175,8 @@ reprint,%
 	\subsection{Highest point}
 	The highest point is the value $y$ at $t_{peak}$ which we can find for substituting $t$ with $t_{peak}$ in our equation for the position $y$.
 	\begin{align}\nonumber
-		y=v_0 \sin\theta\,t - \frac12gt^2 \implies y_{max} = v_0 \sin\theta\,t_{peak} - \frac12gt_{peak}^2\\\nonumber
-		= v_0 \sin\theta\,\frac{v_0\sin\theta}{g} - \frac12g\Big({\frac{v_0\sin\theta}{g}}\Big)^2    = \frac{v_{0}^2\sin^2\theta}{2g}\nonumber
+		y&=v_0 \sin\theta\,t - \frac12gt^2 \implies y_{max} = v_0 \sin\theta\,t_{peak} - \frac12gt_{peak}^2\\\nonumber
+		&= v_0 \sin\theta\,\frac{v_0\sin\theta}{g} - \frac12g\Big({\frac{v_0\sin\theta}{g}}\Big)^2    = \frac{v_{0}^2\sin^2\theta}{2g}\nonumber
 	\end{align}
 	Here $y_{max}$ denotes the highest point the object will reach when thrown at the angle $\theta$ and at the speed $v_0$. This relationship can also be derived using the conservation of energy.
 	\begin{align}\nonumber
@@ -198,23 +198,23 @@ reprint,%
 			z_{max} &= \frac{v_0^22\sin\theta\cos\theta\sin\alpha}{g} = \frac{v_0^2 \sin2\theta\sin\alpha}{g}\nonumber
 		\end{aligned}
 	\end{align}
-	Let $d$ be the absolute length. It is then true that
+	Let $R$ be the range. It is then true that
 	\begin{align}\nonumber
-		d &= \sqrt{\Big(\frac{v_{0}^2\sin2\theta\sin\alpha}{g}\Big)^2 + \Big(\frac{v_{0}^2\sin2\theta\cos\alpha}{g}\Big)^2}\\\label{eq:distance}
+		R &= \sqrt{\Big(\frac{v_{0}^2\sin2\theta\sin\alpha}{g}\Big)^2 + \Big(\frac{v_{0}^2\sin2\theta\cos\alpha}{g}\Big)^2}\\\label{eq:distance}
 		&=\sqrt{\frac{v_{0}^4\sin^2 2\theta}{g^2}} = \frac{v_{0}^2\sin2\theta}{g}
 	\end{align}
 	\subsection{Optimal angle for maximum range}
-	In order to determine the maximum $d$ we will study the derivative of $d$ with respect to $\theta$.
+	In order to determine the maximum $R$ we will study the derivative of $R$ with respect to $\theta$.
 	\begin{align}\nonumber
 		\frac{\partial}{\partial\theta} \frac{v_0^2\sin2\theta}{g} = \frac{2\,v_0^2\cos2\theta}{g}
 	\end{align}
-	Solving $\frac{\partial d}{\partial \theta} = 0$ gives the maxima of $d$
+	Solving $\frac{\partial d}{\partial \theta} = 0$ gives the maxima of $R$
 	\begin{align}\nonumber
 		\frac{2\,v_0^2\cos2\theta}{g} = 0 \implies \cos2\theta = 0 \implies \theta = \pm\frac{\pi}{4}
 	\end{align}
-	We only consider cases where $\theta \geq 0$. Plugging $\theta=\frac{\pi}{4}$ into our expression for $d$ yields the following result.
+	We only consider cases where $\theta \geq 0$. Plugging $\theta=\frac{\pi}{4}$ into our expression for $R$ yields the following result.
 	\begin{align}\nonumber
-		d = \frac{v_{0}^2\sin2\theta}{g} \implies d_{max} = \frac{v_{0}^2\sin\frac\pi2}{g} = \frac{v_{0}^2}{g}
+		R = \frac{v_{0}^2\sin2\theta}{g} \implies R_{max} = \frac{v_{0}^2\sin\frac\pi2}{g} = \frac{v_{0}^2}{g}
 	\end{align}
 	\subsection{Velocity at a given time}
 	At any given time $t$ we are moving in the $x$, $y$ and $z$ directions at a velocity $v$ which is a combination of $v_x$, $v_y$ and $v_z$. We can determine the absolute velocity $||v||$ using the Pythagorean theorem for three dimensions.
@@ -243,14 +243,14 @@ reprint,%
 	For the purpose of this section we will not consider the $z$ axis nor the angle $\alpha$ between the $x$ and $z$ axis. The reasoning behind this is that is would obstruct the results we're trying to conclude. Know that these results are applicable to three dimensions with minimal adjustments including but not limited to multiplying uses of $x$ with $\cos\alpha$.
 	
 	\subsection{Specific projectile range}
-	We want to launch our projectile in a way so that it reaches a distance $d$. We can do this with either a predetermined angle of launch $\theta$ or a predetermined initial velocity $v_0$. From~\eqref{eq:distance} we know that the distance $d$ our object travels is specified by the following equation.
+	We want to launch our projectile in a way so that it has the range $R$. We can do this with either a predetermined angle of launch $\theta$ or a predetermined initial velocity $v_0$. From~\eqref{eq:distance} we know that the range $R$ of our object is specified by the following equation.
 	\begin{align}\nonumber
-		d = \frac{v_{0}^2\sin2\theta}{g}
+		R = \frac{v_{0}^2\sin2\theta}{g}
 	\end{align}
-	From here we can define the functions $\theta(d, v_0)$ and $v_0(d, \theta)$.
+	From here we can define the functions $\theta(R, v_0)$ and $v_0(R, \theta)$.
 	\begin{align}\nonumber
-		\theta(d, v_0) &= \frac12\arcsin\Big(\frac{dg}{v_{0}^2}\Big)\\\nonumber
-		v_0(d, \theta) &= \sqrt{\frac{dg}{\sin2\theta}}
+		\theta(R, v_0) &= \frac12\arcsin\Big(\frac{Rg}{v_{0}^2}\Big)\\\nonumber
+		v_0(R, \theta) &= \sqrt{\frac{Rg}{\sin2\theta}}
 	\end{align}
 	\subsection{Hitting a specific coordinate}
 	When hitting a specific coordinate relative to our initial position we label our initial position $(0, 0)$ and our target position $(x, y)$.
@@ -333,7 +333,7 @@ reprint,%
 		t_{max} &= \frac{-v_0\sin\theta\pm\sqrt{v_{0}^2\sin^2\theta+2g\,y_0}}{-g}\\\label{eq:tMaxFromHeight}
 		&=\frac{v_0\sin\theta}{g}\pm\frac{\sqrt{v_{0}^2\sin^2\theta+2g\,y_0}}{g}
 	\end{align}
-	Setting the second term as negative yields a negative time which is nonsense. We will therefore write it as positive from now on. We can now find the length of a parabola and see how it varies with a changing angle $\theta$. Let $R$ denote the range of the projectile and let it be given by $x(t_{max})$.
+	Setting the second term as negative yields a negative time when $y_0 > 0$ which is nonsense. We will therefore write it as positive from now on. We can now find the length of a parabola and see how it varies with a changing angle $\theta$. Let $R$ denote the range of the projectile and let it be given by $x(t_{max})$.
 	\begin{align}\nonumber
 		R = v_0\cos\theta\,t_{max} &= \frac{v_{0}^2\sin2\theta}{2g}+ \frac{v_0\cos\theta\sqrt{v_{0}^2\sin^2\theta+2g\,y_0}}{g} \\\nonumber
 		&=\frac{v_{0}^2\cos\theta}{g}\Big(\sin\theta+\sqrt{\sin^2\theta+\frac{2g\,y_0}{v_{0}^2}}\Big)
