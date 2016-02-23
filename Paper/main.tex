@@ -489,7 +489,7 @@ reprint,%
 		\sqrt{\frac{k}{g}}\,v &= \tanh(-\sqrt{gk}\,T) \implies \\\label{eq:oneDimAirResVT}
 		v &= -\sqrt{\frac{g}{k}}\,\tanh(\sqrt{gk}\,T)
 	\end{align}
-	We let $C = 0$ since $v(0) = 0$ meaning $T = t$. We can now find $y$ as it is the antiderivative of $v$.
+	$v(0) = 0$ implies $C = 0$ meaning $T = t$. We can now find $y$ as it is the antiderivative of $v$.
 	\begin{align}\nonumber
 		y = \int v\,dt = -\sqrt{\frac{g}{k}}\,\int \tanh(\sqrt{gk}\,t)\,dt
 	\end{align}
@@ -532,7 +532,7 @@ reprint,%
 			v_0 &= 0\,m/s\\
 			\rho &= 1.225\,kg/m^3\\
 			A &= 0.3\,m^2
-		\end{cases}
+		\end{cases} \implies k = 0.432
 	\end{align}
 	\begin{center}
 		\begin{tikzpicture}
@@ -568,7 +568,7 @@ reprint,%
 			v_0 &= 0\,m/s\\
 			\rho &= 1.225\,kg/m^3\\
 			A &= 0.00023916\,m^2
-		\end{cases}
+		\end{cases} \implies k = 0.00313
 	\end{align}
 	\begin{center}
 		\begin{tikzpicture}
