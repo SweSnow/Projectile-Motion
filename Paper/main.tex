@@ -61,7 +61,7 @@ reprint,%
 			\tdplotsetmaincoords{40}{120} 
 			\begin{tikzpicture} [scale = 4, tdplot_main_coords, axis/.style={ -> , black, semithick}, 
 			vector/.style={-stealth, black, ultra thick}, 
-			vector guide/.style={dashed, black, thick}]
+			vector guide/.style={dashed, black, ultra thick}]
 			
 			\coordinate (O) at (0, 0, 0);
 			
@@ -77,7 +77,7 @@ reprint,%
 			
 			\draw[vector] (O) -- (P);
 			
-			\draw[vector guide]         (O) -- (\ax,\ay,0);
+			\draw[vector guide] (O) -- (\ax,\ay,0);
 			\draw[vector guide] (\ax,\ay,0) -- (P);
 			\draw[vector guide] (\ax,\ay,0) -- (0,\ay,0);
 			\draw[vector guide] (\ax,\ay,0) -- (\ax,0,0);
