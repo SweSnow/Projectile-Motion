@@ -444,7 +444,7 @@ reprint,%
 			
 		\end{algorithmic}
 	\end{algorithm}
-	Using the above algorithm with initial data $v_0 =10,m/s$, $\theta = \ang{45} = \frac{\pi}{4}$, $\rho = 1.225\, kg/m^3$, $A = 1\,m^2$, $m = 1\,kg$, $y_0 = 0\,m$ and $C_D = 0.47$ yields the following result. The solid plot is with air resistance and the dashed plot is in a vacuum with the same $v_0$, $y_0$ and $\theta$.
+	Using the above algorithm with initial data $v_0 =10,m/s$, $\theta = \ang{45} = \frac{\pi}{4}$, $\rho = 1.225\, kg/m^3$, $A = 1\,m^2$, $m = 1\,kg$, $y_0 = 0\,m$ and $C_D = 0.47$ which corresponds to a heavy beach ball yields the following result. The solid plot is with air resistance and the dashed plot is in a vacuum with the same $v_0$, $y_0$ and $\theta$.
 	\begin{center}
 		\begin{tikzpicture}
 		\begin{axis}[ 
@@ -544,7 +544,7 @@ reprint,%
 		\end{axis}
 		\end{tikzpicture}
 	\end{center}
-	The slow start with a negative second derivative matches our intuition and at roughly $t = 0.8\,s$ the first derivative appears to approach zero. This should be due to the object reaching its terminal velocity which we can calculate using equation \eqref{eq:oneDimAirResTerminalVel}.
+	The slow start with a negative second derivative matches our intuition and at roughly $t = 0.8\,s$ the second derivative appears to approach zero. This should be due to the object reaching its terminal velocity which we can calculate using equation \eqref{eq:oneDimAirResTerminalVel}.
 	\begin{align}\nonumber
 		v_{max} = \sqrt{\frac{g}{k}} = \sqrt{\frac{9.82}{0.432}} = 4.77\,m/s
 	\end{align}
