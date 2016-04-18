@@ -1,15 +1,12 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.2.17)  21 MAR 2016 10:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.1.23)  18 APR 2016 14:31
 entering extended mode
-**./master.tex
+**master.tex
 (master.tex
-LaTeX2e <2015/10/01> patch level 2
-Babel <3.9n> and hyphenation patterns for 69 languages loaded.
-
-("C:\Users\simonhan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\article.cl
-s"
+LaTeX2e <2014/05/01>
+Babel <3.9l> and hyphenation patterns for 68 languages loaded.
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\article.cls"
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
-("C:\Users\simonhan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\size10.clo
-"
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\size10.clo"
 File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
@@ -24,15 +21,13 @@ File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-("C:\Users\simonhan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pdfpages\pdfpag
-es.sty"
-Package: pdfpages 2015/09/18 v0.5d Insert pages of external PDF documents (AM)
+("C:\Program Files\MiKTeX 2.9\tex\latex\pdfpages\pdfpages.sty"
+Package: pdfpages 2013/08/25 v0.4v Insert pages of external PDF documents (AM)
 
-("C:\Users\simonhan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ifthen.sty
-"
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ifthen.sty"
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
-("C:\Users\simonhan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\calc.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\calc.sty"
 Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Acount=\count87
 \calc@Bcount=\count88
@@ -40,49 +35,40 @@ Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Bdimen=\dimen104
 \calc@Askip=\skip43
 \calc@Bskip=\skip44
-LaTeX Info: Redefining \setlength on input line 80.
-LaTeX Info: Redefining \addtolength on input line 81.
+LaTeX Info: Redefining \setlength on input line 75.
+LaTeX Info: Redefining \addtolength on input line 76.
 \calc@Ccount=\count89
 \calc@Cskip=\skip45
 )
-("C:\Users\simonhan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\eso-pic\eso-pic
-.sty"
-Package: eso-pic 2015/07/21 v2.0g eso-pic (RN)
+("C:\Program Files\MiKTeX 2.9\tex\latex\eso-pic\eso-pic.sty"
+Package: eso-pic 2013/10/06 v2.0d eso-pic (RN)
 
-("C:\Users\simonhan\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\atbe
-gshi.sty"
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\atbegshi.sty"
 Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
 
-("C:\Users\simonhan\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\infw
-arerr.sty"
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
 Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 )
-("C:\Users\simonhan\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ltxc
-mds.sty"
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
-("C:\Users\simonhan\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ifpd
-f.sty"
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
 Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
 Package ifpdf Info: pdfTeX in PDF mode is detected.
 ))
-("C:\Users\simonhan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\keyval
-.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks14
 )
-("C:\Users\simonhan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\xcolor\xcolor.s
-ty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty"
 Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
 
-("C:\Users\simonhan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\00miktex\color.
-cfg"
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
 Package xcolor Info: Driver file: pdftex.def on input line 225.
 
-("C:\Users\simonhan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pdftex-def\pdft
-ex.def"
+("C:\Program Files\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 \Gread@gobject=\count90
 )
@@ -96,41 +82,31 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
 ))
-("C:\Users\simonhan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\graphi
-cx.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
 Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 
-("C:\Users\simonhan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\graphi
-cs.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
 Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
 
-("C:\Users\simonhan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\trig.s
-ty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty"
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-("C:\Users\simonhan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\00miktex\graphi
-cs.cfg"
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
 File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
 )
-Package graphics Info: Driver file: pdftex.def on input line 94.
+Package graphics Info: Driver file: pdftex.def on input line 91.
 )
 \Gin@req@height=\dimen105
 \Gin@req@width=\dimen106
 )
-\AM@pagewidth=\dimen107
-\AM@pageheight=\dimen108
-
-("C:\Users\simonhan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pdfpages\pppdft
-ex.def"
-File: pppdftex.def 2015/09/18 v0.5d Pdfpages driver for pdfTeX (AM)
+("C:\Program Files\MiKTeX 2.9\tex\latex\pdfpages\pppdftex.def"
+File: pppdftex.def 2013/08/25 v0.4v Pdfpages driver for pdfTeX (AM)
 )
 \AM@pagebox=\box26
 \AM@toc@title=\toks15
 \c@AM@survey=\count91
 \AM@templatesizebox=\box27
 ) (master.aux)
-\openout1 = `master.aux'.
-
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 4.
 LaTeX Font Info:    ... okay on input line 4.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 4.
@@ -145,51 +121,40 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 4.
 LaTeX Font Info:    ... okay on input line 4.
 \AtBeginShipoutBox=\box28
 
-("C:\Users\simonhan\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\supp-pdf
-.mkii"
+("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count92
-\scratchdimen=\dimen109
+\scratchdimen=\dimen107
 \scratchbox=\box29
 \nofMPsegments=\count93
 \nofMParguments=\count94
 \everyMPshowfont=\toks16
 \MPscratchCnt=\count95
-\MPscratchDim=\dimen110
+\MPscratchDim=\dimen108
 \MPnumerator=\count96
 \makeMPintoPDFobject=\count97
 \everyMPtoPDFconversion=\toks17
-)
-("C:\Users\simonhan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\pdflsc
-ape.sty"
-Package: pdflscape 2008/08/11 v0.10 Display of landscape pages in PDF (HO)
-
-("C:\Users\simonhan\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\lscape
-.sty"
-Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
-)
-Package pdflscape Info: Auto-detected driver: pdftex on input line 80.
-
-("C:\Users\simonhan\AppData\Local\Programs\MiKTeX 2.9\tex\generic\ifxetex\ifxet
-ex.sty"
-Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
-)) <intro.pdf, id=1, 597.50829pt x 845.0471pt>
+) <intro.pdf, id=1, 597.50829pt x 845.0471pt>
 File: intro.pdf Graphic file (type pdf)
  <use intro.pdf>
 Package pdftex.def Info: intro.pdf used on input line 6.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
 File: intro.pdf Graphic file (type pdf)
-
-<use intro.pdf>
+ <use intro.pdf>
 Package pdftex.def Info: intro.pdf used on input line 6.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
- <intro.pdf, id=4, page=1, 597.50829pt x 845.0471pt>
-File: intro.pdf Graphic file (type pdf)
 
-<use intro.pdf, page 1>
+<intro.pdf, id=4, page=1, 597.50829pt x 845.0471pt>
+File: intro.pdf Graphic file (type pdf)
+ <use intro.pdf, page 1>
 Package pdftex.def Info: intro.pdf, page1 used on input line 6.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
 File: intro.pdf Graphic file (type pdf)
+
+<use intro.pdf, page 1>
+Package pdftex.def Info: intro.pdf, page1 used on input line 6.
+(pdftex.def)             Requested size: 562.12285pt x 795.00201pt.
+File: intro.pdf Graphic file (type pdf)
  <use intro.pdf, page 1>
 Package pdftex.def Info: intro.pdf, page1 used on input line 6.
 (pdftex.def)             Requested size: 562.12285pt x 795.00201pt.
@@ -200,21 +165,12 @@ Package pdftex.def Info: intro.pdf, page1 used on input line 6.
 File: intro.pdf Graphic file (type pdf)
 
 <use intro.pdf, page 1>
-Package pdftex.def Info: intro.pdf, page1 used on input line 6.
-(pdftex.def)             Requested size: 562.12285pt x 795.00201pt.
-File: intro.pdf Graphic file (type pdf)
- <use intro.pdf, page 1>
 Package pdftex.def Info: intro.pdf, page1 used on input line 6.
 (pdftex.def)             Requested size: 562.12285pt x 795.00201pt.
  [1
 
- <./intro.pdf{C:/Users/simonhan/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.m
-ap}>]
-<intro.pdf, id=25, page=2, 597.50829pt x 845.0471pt>
-File: intro.pdf Graphic file (type pdf)
- <use intro.pdf, page 2>
-Package pdftex.def Info: intro.pdf, page2 used on input line 6.
-(pdftex.def)             Requested size: 562.12285pt x 795.00201pt.
+ <./intro.pdf{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}>] <intro.pdf,
+ id=25, page=2, 597.50829pt x 845.0471pt>
 File: intro.pdf Graphic file (type pdf)
 
 <use intro.pdf, page 2>
@@ -224,12 +180,12 @@ File: intro.pdf Graphic file (type pdf)
  <use intro.pdf, page 2>
 Package pdftex.def Info: intro.pdf, page2 used on input line 6.
 (pdftex.def)             Requested size: 562.12285pt x 795.00201pt.
- [2 <./intro.pdf>]
-<intro.pdf, id=29, page=3, 597.50829pt x 845.0471pt>
 File: intro.pdf Graphic file (type pdf)
- <use intro.pdf, page 3>
-Package pdftex.def Info: intro.pdf, page3 used on input line 6.
+ <use intro.pdf, page 2>
+Package pdftex.def Info: intro.pdf, page2 used on input line 6.
 (pdftex.def)             Requested size: 562.12285pt x 795.00201pt.
+
+[2 <./intro.pdf>] <intro.pdf, id=29, page=3, 597.50829pt x 845.0471pt>
 File: intro.pdf Graphic file (type pdf)
 
 <use intro.pdf, page 3>
@@ -239,22 +195,35 @@ File: intro.pdf Graphic file (type pdf)
  <use intro.pdf, page 3>
 Package pdftex.def Info: intro.pdf, page3 used on input line 6.
 (pdftex.def)             Requested size: 562.12285pt x 795.00201pt.
- [3 <./intro.pdf>]
-<main.pdf, id=33, 614.295pt x 794.97pt>
-File: main.pdf Graphic file (type pdf)
- <use main.pdf>
-Package pdftex.def Info: main.pdf used on input line 7.
-(pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
-File: main.pdf Graphic file (type pdf)
- <use main.pdf>
-Package pdftex.def Info: main.pdf used on input line 7.
-(pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
+File: intro.pdf Graphic file (type pdf)
+ <use intro.pdf, page 3>
+Package pdftex.def Info: intro.pdf, page3 used on input line 6.
+(pdftex.def)             Requested size: 562.12285pt x 795.00201pt.
 
-<main.pdf, id=36, page=1, 614.295pt x 794.97pt>
+[3 <./intro.pdf>] <main.pdf, id=33, 614.295pt x 794.97pt>
+File: main.pdf Graphic file (type pdf)
+ <use main.pdf>
+Package pdftex.def Info: main.pdf used on input line 7.
+(pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
+File: main.pdf Graphic file (type pdf)
+
+<use main.pdf>
+Package pdftex.def Info: main.pdf used on input line 7.
+(pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
+ <main.pdf, id=36, page=1, 614.295pt x 794.97pt>
+File: main.pdf Graphic file (type pdf)
+
+<use main.pdf, page 1>
+Package pdftex.def Info: main.pdf, page1 used on input line 7.
+(pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
 File: main.pdf Graphic file (type pdf)
  <use main.pdf, page 1>
 Package pdftex.def Info: main.pdf, page1 used on input line 7.
-(pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+File: main.pdf Graphic file (type pdf)
+ <use main.pdf, page 1>
+Package pdftex.def Info: main.pdf, page1 used on input line 7.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
 File: main.pdf Graphic file (type pdf)
 
 <use main.pdf, page 1>
@@ -262,15 +231,6 @@ Package pdftex.def Info: main.pdf, page1 used on input line 7.
 (pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
 File: main.pdf Graphic file (type pdf)
  <use main.pdf, page 1>
-Package pdftex.def Info: main.pdf, page1 used on input line 7.
-(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
-File: main.pdf Graphic file (type pdf)
- <use main.pdf, page 1>
-Package pdftex.def Info: main.pdf, page1 used on input line 7.
-(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
-File: main.pdf Graphic file (type pdf)
-
-<use main.pdf, page 1>
 Package pdftex.def Info: main.pdf, page1 used on input line 7.
 (pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
  [4 <./main.pdf>]
@@ -485,47 +445,39 @@ Package pdftex.def Info: main.pdf, page15 used on input line 7.
 (pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
  [18 <./main.pdf>] (master.aux) ) 
 Here is how much of TeX's memory you used:
- 2472 strings out of 493634
- 35559 string characters out of 3134015
- 95729 words of memory out of 3000000
- 5864 multiletter control sequences out of 15000+200000
+ 2418 strings out of 493698
+ 33170 string characters out of 3144412
+ 93178 words of memory out of 3000000
+ 5762 multiletter control sequences out of 15000+200000
  3640 words of font info for 14 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 39i,18n,43p,239b,419s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Users/simonhan/AppData/Local/Programs/MiKT
-eX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/simonhan/AppData/Loc
-al/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Users/simon
-han/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pf
-b><C:/Users/simonhan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfo
-nts/cm/cmex10.pfb><C:/Users/simonhan/AppData/Local/Programs/MiKTeX 2.9/fonts/ty
-pe1/public/amsfonts/cmextra/cmex7.pfb><C:/Users/simonhan/AppData/Local/Programs
-/MiKTeX 2.9/fonts/type1/public/amsfonts/cmextra/cmex9.pfb><C:/Users/simonhan/Ap
-pData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/U
-sers/simonhan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
-cmmi6.pfb><C:/Users/simonhan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publ
-ic/amsfonts/cm/cmmi7.pfb><C:/Users/simonhan/AppData/Local/Programs/MiKTeX 2.9/f
-onts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/simonhan/AppData/Local/Progra
-ms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/simonhan/AppDa
-ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users
-/simonhan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr1
-7.pfb><C:/Users/simonhan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/a
-msfonts/cm/cmr5.pfb><C:/Users/simonhan/AppData/Local/Programs/MiKTeX 2.9/fonts/
-type1/public/amsfonts/cm/cmr6.pfb><C:/Users/simonhan/AppData/Local/Programs/MiK
-TeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/simonhan/AppData/Loca
-l/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/simonha
-n/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:
-/Users/simonhan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/c
-m/cmssbx10.pfb><C:/Users/simonhan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
-/public/amsfonts/cm/cmsy10.pfb><C:/Users/simonhan/AppData/Local/Programs/MiKTeX
- 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/simonhan/AppData/Local/
-Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/simonhan
-/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:
-/Users/simonhan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/c
-m/cmti8.pfb><C:/Users/simonhan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
-blic/amsfonts/cm/cmtt10.pfb><C:/Users/simonhan/AppData/Local/Programs/MiKTeX 2.
-9/fonts/type1/public/amsfonts/cm/cmtt8.pfb><C:/Users/simonhan/AppData/Local/Pro
-grams/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on master.pdf (18 pages, 446485 bytes).
+ 39i,18n,43p,223b,417s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files/MiKTeX 2.9/fonts/type1/publi
+c/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfon
+ts/cm/cmbx9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmc
+sc10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb
+><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><C:
+/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cmextra/cmex9.pfb><C:/Pro
+gram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Fil
+es/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX
+ 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/font
+s/type1/public/amsfonts/cm/cmmi9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/p
+ublic/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/ams
+fonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
+cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb>
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Progra
+m Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/Mi
+KTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
+/public/amsfonts/cm/cmssbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
+c/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfon
+ts/cm/cmsy6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cms
+y7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C
+:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti8.pfb><C:/Program
+ Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Program Files/M
+iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt8.pfb><C:/Program Files/MiKTeX 2.9
+/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on master.pdf (18 pages, 447261 bytes).
 PDF statistics:
  251 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

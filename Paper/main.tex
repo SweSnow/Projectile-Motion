@@ -53,9 +53,9 @@ reprint,%
 	\title[On the properties of projectile motion and quadratic air resistance]{}
 	
 	\section{Introduction}
-	Projectile motion is the motion in which an object travels under the constant effect of a force field. The simplest form of projectile motion considers a closed system with no air resistance while a more advanced one might consider multiple gravitational pulls or air resistance \todo{Du skulle kunna säga typ friction forces (istället för air resistance) om du vill hålla det mer generellt}. This paper will first describe the ideal trajectory and properties of a projectile parabola\todo{Här introcerar du projectile parabola lite innan du sagt vad det är, men förstår om du vill göra det} and then develop and test an analytical solution to quadratic air resistance \todo{Kanske borde vara typ "and then progressing to models of quadratic air resistance"}.
+	Projectile motion is the motion in which an object travels under the constant effect of a force field. The simplest form of projectile motion considers a closed system with no air resistance while a more advanced one might consider multiple gravitational pulls or air resistance. This paper will first describe the ideal trajectory and properties of a projectile parabola and then develop and test an analytical solution to quadratic air resistance.
 	\section{Trajectory}
-	Consider a Euclidean space $\mathbb{R}^3$ with the three axes $x \comma y$ and $z$. At any time $t$ we want to be able to describe the acceleration, velocity and position of an object with the three vectors $A = (a_x \comma a_y \comma a_z)\comma V = (v_x \comma v_y \comma v_z)$ and $P = (x \comma y \comma z)$. Let $\theta$ be the angle between the $xz$ plane and the initial direction of the object and $\alpha$ the angle between the $x$ axis and a projection of the path on the $xz$ plane. This is visualized in the graph \todo{figure?} below.
+	Consider a Euclidean space $\mathbb{R}^3$ with the three axes $x \comma y$ and $z$. At any time $t$ we want to be able to describe the acceleration, velocity and position of an object with the three vectors $A = (a_x \comma a_y \comma a_z)\comma V = (v_x \comma v_y \comma v_z)$ and $P = (x \comma y \comma z)$. Let $\theta$ be the angle between the $xz$ plane and the initial direction of the object and $\alpha$ the angle between the $x$ axis and a projection of the path on the $xz$ plane. This is visualized in the figure below.
 	\begin{center}
 		\trimbox{0cm 0cm 0cm -0.6cm} {
 			\tdplotsetmaincoords{40}{120} 
@@ -91,7 +91,6 @@ reprint,%
 			\end{tikzpicture}
 		}
 	\end{center}
-	\todo{Den här är ju fett snygg och ger ett bra intryck för papret}
 	\subsection{Acceleration}
 	The law of universal gravitation states
 	\begin{align}\nonumber
@@ -101,11 +100,11 @@ reprint,%
 	\begin{align}\nonumber
 		F=ma
 	\end{align}
-	where $F$ is any force, $m$ is the mass of the object and $a$ is the acceleration of the object \todo{tycker det borde vara komma eller semikolon eller nåt} we can get an expression for $a$.
+	where $F$ is any force, $m$ is the mass of the object and $a$ is the acceleration of the object we can get an expression for $a$.
 	\begin{align}\nonumber
 		G\frac{mM}{r^2} = ma \implies a=G\frac{M}{r^2}	
 	\end{align}
-	This is the gravitational acceleration \todo{kanske borde säga att (eller varför) den är konstant} which we will denote $g$ to avoid confusion with other accelerations. This vector is the force an object will experience towards the earth. In our considered system the $y$ axis is pointing upwards and the gravitational acceleration is pointing downwards towards the ground. This means the vertical acceleration is $-g$ allowing us to express the total accelerations vector $A$ as follows.
+	This is the gravitational acceleration which we will denote $g$ to avoid confusion with other accelerations. This vector is the force an object will experience towards the earth. In our considered system the $y$ axis is pointing upwards and the gravitational acceleration is pointing downwards towards the ground. This means the vertical acceleration is $-g$ allowing us to express the total accelerations vector $A$ as follows.
 	\begin{align}\nonumber
 		A=
 		\begin{bmatrix} 
@@ -124,7 +123,7 @@ reprint,%
 	\begin{align}\nonumber
 		\int-g\,dt = -gt + C
 	\end{align}
-	Here $C$ is a constant of integration and can be written as $v_0 \sin\theta$ due to $\theta$ being the angle between the $xz$ plane and the $y$ axis. \todo{Känns lite omotiverat} This allows us to define the total velocity vector $V$.
+	Here $C$ is a constant of integration and can be written as $v_0 \sin\theta$ due to $\theta$ being the angle between the $xz$ plane and the $y$ axis making it the initial velocity in the $y$ direction. This allows us to define the total velocity vector $V$.
 	\begin{align}\nonumber
 		V=
 		\begin{bmatrix} 
@@ -157,7 +156,7 @@ reprint,%
 		y(x) &= \frac{v_0 \sin\theta\,x}{v_0 \cos\theta\cos\alpha}-\frac{g}{2}\frac{x^2}{v_{0}^2\cos^2\theta\cos^2\alpha}\\\label{eq:yFromX}
 		&= \frac{\tan\theta}{\cos\alpha}x - \frac{g}{2v_{0}^2\cos^2\theta\cos^2\alpha} x^2
 	\end{align}
-	Which is a second degree polynomial \todo{Kanske räcker med att sluta meningen här} proving that projectile motion can be described as a parabola.
+	Which is a second degree polynomial.
 	\section{Properties of a projectile parabola}\label{seq:properties}
 	\subsection{Time to highest point}
 	The time to highest point is the amount of time it takes for our object to reach its peak height which we will denote $t_{peak}$. Since $y(t)$ is a second degree polynominal it only has one extremum. This must be the maximum because $v_y(0) > 0$. We can therefore solve $v_y = 0$ for $t_{peak}$.
@@ -170,7 +169,7 @@ reprint,%
 		y&=v_0 \sin\theta\,t - \frac12gt^2 \implies y_{max} = v_0 \sin\theta\,t_{peak} - \frac12gt_{peak}^2\\\nonumber
 		&= v_0 \sin\theta\,\frac{v_0\sin\theta}{g} - \frac12g\Big({\frac{v_0\sin\theta}{g}}\Big)^2    = \frac{v_{0}^2\sin^2\theta}{2g}\nonumber
 	\end{align}
-	Here $y_{max}$ denotes the highest point the object will reach when thrown at the angle $\theta$ and at the speed $v_0$. This relationship can also be derived using the conservation of energy.\todo{Här är mindre rigoröst (du sa liksom F=ma förut), men fattar definitivt varför} \todo{Dock nice att du tar med det också och visade att härledningen kan göras mycket lättare}
+	Here $y_{max}$ denotes the highest point the object will reach when thrown at the angle $\theta$ and at the speed $v_0$. This relationship can also be derived using the conservation of energy.
 	\begin{align}\nonumber
 		\frac{mv_{y}^2}{2} = mg\,y_{max} \implies y_{max} = \frac{v_{y}^2}{2g} = \frac{v_{0}^2\sin^2\theta}{2g}
 	\end{align}
@@ -180,9 +179,7 @@ reprint,%
 		y = v_0 \sin\theta\,t - \frac12gt^2 = 0&\implies v_0 \sin\theta\,t_{max} = \frac12gt_{max}^2\\\label{eq:tMax}
 		&\implies t_{max} = \frac{2\,v_0 \sin\theta}{g}
 	\end{align}
-	\todo{Du trollar bort lösningen t=0 när du delar med t, men förstår varför}
-	%kanske tydliggöra varför x, z måste separeras och allt
-	Where $t_{max}$ is the time the object spends in the air. We can now substitute $t$ for $t_{max}$ in our expression for the $x$ and $z$ positions.
+	Where $t_{max}$ is the time the object spends in the air. The solution $t=0$ can be discarded as it is the initial value. We can now substitute $t$ for $t_{max}$ in our expression for the $x$ and $z$ positions.
 	\begin{align}\nonumber
 		\begin{aligned}[t]
 			x &= v_0 \cos\theta\cos\alpha\,t \implies  \\\nonumber
@@ -191,19 +188,17 @@ reprint,%
 			z_{max} &= \frac{v_0^22\sin\theta\cos\theta\sin\alpha}{g} = \frac{v_0^2 \sin2\theta\sin\alpha}{g}\nonumber
 		\end{aligned}
 	\end{align}
-	Let $R$ be the range. It is then true that
+	Let $R$ be the range. By the Pythagorean theorem it is then true that
 	\begin{align}\nonumber
 		R &= \sqrt{\Big(\frac{v_{0}^2\sin2\theta\sin\alpha}{g}\Big)^2 + \Big(\frac{v_{0}^2\sin2\theta\cos\alpha}{g}\Big)^2}\\\label{eq:distance}
 		&=\sqrt{\frac{v_{0}^4\sin^2 2\theta}{g^2}} = \frac{v_{0}^2\sin2\theta}{g}
 	\end{align}
 	\subsection{Optimal angle for maximum range}
-	\todo{Kanske typ "The the optimal theta for maximizing R may be determined by studying the derivative of R with respect to theta." Så att det blir lite klarare att du vill optimera theta }
-	In order to determine the maximum $R$ we will study the derivative of $R$ with respect to $\theta$.
+	The the optimal theta for maximizing R may be determined by studying the derivative of R with respect to theta.
 	\begin{align}\nonumber
 		\frac{\partial}{\partial\theta} \frac{v_0^2\sin2\theta}{g} = \frac{2\,v_0^2\cos2\theta}{g}
 	\end{align}
-	\todo{d R/d theta ka det väl va}
-	Solving $\frac{\partial d}{\partial \theta} = 0$ gives the maxima of $R$.
+	Solving $\frac{\partial R}{\partial \theta} = 0$ gives the maxima of $R$.
 	\begin{align}\nonumber
 		\frac{2\,v_0^2\cos2\theta}{g} = 0 \implies \cos2\theta = 0 \implies \theta = \pm\frac{\pi}{4}
 	\end{align}
@@ -212,8 +207,7 @@ reprint,%
 		R = \frac{v_{0}^2\sin2\theta}{g} \implies R_{max} = \frac{v_{0}^2\sin\frac\pi2}{g} = \frac{v_{0}^2}{g}
 	\end{align}
 	\subsection{Velocity at a given time}
-	\todo{Är det här inte angle at a given time?}
-	At any given time $t$ we are moving in the $x$, $y$ and $z$ directions at a velocity $v$ which is a combination of $v_x$, $v_y$ and $v_z$. We can determine the absolute velocity $||v||$ using the Pythagorean theorem for three dimensions.\todo{Här nämner du pyth men inte när du räknar ut R}
+	At any given time $t$ we are moving in the $x$, $y$ and $z$ directions at a velocity $v$ which is a combination of $v_x$, $v_y$ and $v_z$. We can determine the absolute velocity $||v||$ using the Pythagorean theorem for three dimensions.
 	\begin{align}\nonumber
 		||v|| &= \sqrt{v_{x}^2+v_{y}^2+v_{z}^2}\\\nonumber
 		&= \sqrt{v_{0}^2\cos^2\theta\cos^2\alpha+(v_0\sin\theta -gt)^2+v_{0}^2\cos^2\theta\sin^2\alpha}\\\nonumber
@@ -235,21 +229,18 @@ reprint,%
 	\end{align}
 	\section{Choosing initial values to match result values}\label{seq:resultValues}
 	\subsection{Delimitations}
-	%Mindre fumlig motivering
-	For the purpose of this section we will not consider the $z$ axis nor the angle $\alpha$ between the $x$ and $z$ axis. The reasoning behind this is that is would obstruct \todo{Skulle det verkligen obstruct? Blir det inte bara svårare att se? typ introduce unnecessary complexity } the results we're trying to conclude. Know that these results are applicable \todo{kanske expandable eller may be expanded} to three dimensions with minimal adjustments \todo{Kanske for example istället} including but not limited to multiplying uses of $x$ with $\cos\alpha$.
+	For the purpose of this section we will not consider the $z$ axis nor the angle $\alpha$ between the $x$ and $z$ axis. The reasoning behind this is that is would introduce unnecessary complexity to the results. Know that these results may be expanded to three dimensions with minimal adjustments for example by multiplying uses of $x$ with $\cos\alpha$.
 	
 	\subsection{Specific projectile range}
-	\todo{På vilket sätt specifyar du projectile range i den här sektionen?}
 	We want to launch our projectile in a way so that it has the range $R$. We can do this with either a predetermined angle of launch $\theta$ or a predetermined initial velocity $v_0$. From~\eqref{eq:distance} we know that the range $R$ of our object is specified by the following equation.
 	\begin{align}\nonumber
 		R = \frac{v_{0}^2\sin2\theta}{g}
 	\end{align}
-	From here we can define the functions $\theta(R, v_0)$ and $v_0(R, \theta)$.
+	From here we can develop expressions for $\theta$ and $v_0$.
 	\begin{align}\nonumber
-		\theta(R, v_0) &= \frac12\arcsin\Big(\frac{Rg}{v_{0}^2}\Big)\\\nonumber
-		v_0(R, \theta) &= \sqrt{\frac{Rg}{\sin2\theta}}
+		\theta &= \frac12\arcsin\Big(\frac{Rg}{v_{0}^2}\Big)\\\nonumber
+		v_0 &= \sqrt{\frac{Rg}{\sin2\theta}}
 	\end{align}
-	\todo{Känns lite konstigt att theta och v0 är funktioner av konstanter. Känns som att man kan använda funktionerna ovan för att räkna ut ex theta vid en viss tidpunkt, men du vill ju bara att man ska kunna räkna ut theta om man har R och v0 (antar jag)}
 	\subsection{Hitting a specific coordinate}
 	When hitting a specific coordinate relative to our initial position we label our initial position $(0, 0)$ and our target position $(x, y)$.
 	\subsubsection{Predetermined speed}\label{seq:predSpeed}
@@ -258,8 +249,7 @@ reprint,%
 		P_x &= v_0\cos\theta\,t\\\nonumber
 		P_y &= v_0\sin\theta\,t - \frac12gt^2\nonumber
 	\end{align}
-	\todo{Ska det inte bara vara x och y? Du har definierat P = (x, y). Du skriver ju ändå om till x och y sen}
-	and we want to determine $\theta$ such that $P_x = x$ and $P_y = y$ where $P$ is the total position vector and $v_0$ and $t$ is the same for both $P_x$ and $P_y$ \todo{Behöver du berätta det här?}. Since $P_y$ is the more convoluted expression we solve $P_x$ for $t$ and substitute it into $P_y$.
+	and we want to determine $\theta$ such that $P_x = x$ and $P_y = y$ where $P$ is the total position vector and $v_0$ and $t$ is the same for both $P_x$ and $P_y$. Since $P_y$ is the more convoluted expression we solve $P_x$ for $t$ and substitute it into $P_y$.
 	\begin{align}\nonumber
 		t=\frac{x}{v_0\cos\theta} \implies y &= \frac{v_0x\sin\theta}{v_0\cos\theta} - \frac{g}{2}\Big(\frac{x}{v_0\cos\theta}\Big)^2\\\label{eq:yOfXandTViaT}
 		&= x\tan\theta-\frac{gx^2}{2v_{0}^2}\Big(\frac{1}{\cos^2\theta}\Big)
@@ -272,12 +262,7 @@ reprint,%
 	\begin{align}\nonumber
 		y=xh-\frac{gx^2}{2v_{0}^2}\big( 1+h^2\big) \implies \frac{-gx^2}{2v_{0}^2}h^2+xh-\frac{gx^2}{2v_{0}^2}-y = 0
 	\end{align}
-	\todo{Behöver du definiera pq?}
-	This can be solved using the quadratic formula which is as follows
-	\begin{align}\label{eq:quadFormula}
-		ax^2+bx+c=0 \implies x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}
-	\end{align}
-	Substituting $x$ for $h$, $a$ for $\frac{-gx^2}{2v_{0}^2}$, $b$ for $x$ and $c$ for $-\frac{gx^2}{2v_{0}^2}-y$ gives
+	This is a second degree polynomial meaning we can solve it for $h$ using the quadratic formula. Substituting $a$ for $\frac{-gx^2}{2v_{0}^2}$, $b$ for $x$ and $c$ for $-\frac{gx^2}{2v_{0}^2}-y$ gives
 	\begin{align}\nonumber
 		h &= \frac{-x\pm\sqrt{x^2-4\big(\frac{-gx^2}{2v_{0}^2}\big)\big(\frac{-gx^2}{2v_{0}^2}-y\big)}}{\frac{-gx^2}{v_{0}^2}}\\\nonumber
 		&= \frac{\frac{xv_{0}^2}{x}\pm\frac{v_{0}^2}{x}\sqrt{x^2-\frac{g^2x^4}{v_{0}^4}+\frac{2gx^2y}{v_{0}^2}}}{gx}\\\nonumber
@@ -323,24 +308,24 @@ reprint,%
 	\end{align}
 	\section{Longest parabola starting at height}
 	\subsection{Expression for range}
-	Consider a parabola where $y(0) > 0$. We will denote this initial location on the $y$ axis $y_0$. We now want to determine which angle $\theta$ yields the farthest possible parabola. We begin by solving $y=0$ for $t$ where our constant of integration $c_y$ for $y$ is $y_0$.
+	Consider a parabola where $y(0) > 0$. We will denote this initial location on the $y$ axis $y_0$. We now want to determine which angle $\theta$ yields the farthest possible parabola. We begin by solving $y=0$ for $t_{max}$ where our constant of integration $c_y$ for $y$ is $y_0$.
 	\begin{align}\nonumber
-		y=v_0\sin\theta\,t - \frac12gt^2 + y_0 &= 0 \implies\\\nonumber
-		-\frac12g\,t^2+v_0\sin\theta\,t+y_0 &= 0
+		y=v_0\sin\theta\,t_{max} - \frac12gt_{max}^2 + y_0 &= 0 \implies\\\nonumber
+		-\frac12g\,t_{max}^2+v_0\sin\theta\,t_{max}+y_0 &= 0
 	\end{align}
-	Recall equation \eqref{eq:quadFormula}. Substituting $a$ for $-\frac12g$, $b$ for $v_0\sin\theta$ and $c$ for $y_0$ gives the following expression for $t_{max}$
+	Using the quadratic formula and substituting $a$ for $-\frac12g$, $b$ for $v_0\sin\theta$ and $c$ for $y_0$ we obtain the following expression for $t_{max}$
 	\begin{align}\nonumber
 		t_{max} &= \frac{-v_0\sin\theta\pm\sqrt{v_{0}^2\sin^2\theta+2g\,y_0}}{-g}\\\label{eq:tMaxFromHeight}
 		&=\frac{v_0\sin\theta}{g}\pm\frac{\sqrt{v_{0}^2\sin^2\theta+2g\,y_0}}{g}
 	\end{align}
-	Setting the second term as negative yields a negative time when $y_0 > 0$ which is nonsense \todo{Which is not defined eller physically impossible? (nonsense är bra annars)}. We will therefore write it as positive from now on. \todo{kan bindas ihop med förra "... and can/may now find the length"}We can now find the length of a parabola \todo{observing how it varies with...?} and see how it varies with a changing angle $\theta$. Let $R$ denote the range of the projectile and let it be given by $x(t_{max})$. \todo{Kanske bara " given by x(tmax)"}
+	Setting the second term as negative yields a negative time since $y_0$ is defined as $y_0 > 0$. This is a representation of the object traveling in a parabola at all times $t$ and crossing the initial position at $t=0$. We will therefore write it as positive from now on. We can now find the length of a parabola and see how it varies with a changing angle $\theta$. Let $R$ denote the range of the projectile given by $x(t_{max})$.
 	\begin{align}\nonumber
 		R = v_0\cos\theta\,t_{max} &= \frac{v_{0}^2\sin2\theta}{2g}+ \frac{v_0\cos\theta\sqrt{v_{0}^2\sin^2\theta+2g\,y_0}}{g} \\\nonumber
 		&=\frac{v_{0}^2\cos\theta}{g}\Big(\sin\theta+\sqrt{\sin^2\theta+\frac{2g\,y_0}{v_{0}^2}}\Big)
 	\end{align}
+	Maximizing $R$ by finding an optimal $\theta$ is not easily solvable algebraically. We will therefore move on to numerical methods. 
 	\subsection{Algorithm}
-	\todo{Kanske borde säga varför det ska göras numeriskt: because this can not be solved by analytical methods, it must be solved numerically. For this solution we want to write an algorithm...}
-	We want to write an algorithm that takes the initial height and velocity and returns the optimal angle. The code tests all possible angles $\theta$ \todo{Du kan ju inte testa alla} in our equation for $R$ and determines which gives the farthest possible throw. The following pseudo code details the procedure.\todo{The procedure is described in the following pseudo code (kanske)}
+	We want to write an algorithm that takes the initial height and velocity and returns the optimal angle. The code tests as many as possible angles $\theta$ in our equation for $R$ and determines which gives the farthest possible throw. The procedure is described in the following pseudo code.
 	\begin{algorithm}[H]
 		\caption{Algorithm for optimal angle as a function of initial height}
 		\label{alg:optimalAngle}
@@ -374,7 +359,7 @@ reprint,%
 			
 		\end{algorithmic}
 	\end{algorithm}
-	The following two plots are the results of the above algorithm with the initial conditions $v_0 = 10\,m/s$, $h_{min} = 0\,m, h_{max} = 20\,m$ and $v_0 = 25\,m/s$, $h_{min} = 0\,m, h_{max} = 100\,m$ respectively.\todo{Kanske inte behöver säga skalan eftersom det framgår i figuren. Kanske bara typ "is shown in the following two plots"}
+	The following two plots are the results of the above algorithm with the initial conditions $v_0 = 10\,m/s$, $h_{min} = 0\,m, h_{max} = 20\,m$ and $v_0 = 25\,m/s$, $h_{min} = 0\,m, h_{max} = 100\,m$ respectively.
 	\begin{center}
 		\begin{tikzpicture}
 		\begin{axis}[ 
@@ -395,22 +380,22 @@ reprint,%
 		\end{axis}
 		\end{tikzpicture}
 	\end{center}
-	These graph both follow the same pattern that the distance gained from aiming upwards shrinks as the starting height increases. \todo{Du menar derivatan eller? Kanske borde säga att det är så man ser det} This is because the travel time cannot be changed all that much when the starting height already contributes so much to the distance.
+	These graph both follow the same pattern that the distance gained from aiming upwards shrinks as the starting height increases. This is because the travel time cannot be changed all that much when the starting height already contributes so much to the distance.
 	\\~\\
 	The full code is available at GitHub\cite{code} and mostly contained in \texttt{math.js}. Algorithm \ref{alg:optimalAngle} can be found in the function \texttt{bestAngleFromStartingHeight()}.
 	\section{Computational approach to air resistance}\label{seq:numericalAirRes}
 	\subsection{Change at every time interval}
-	At every time interval $\Delta\,t$ we can apply a force on our object in an angle opposite to $\beta$ proportional to our velocity $v$. While this does not give us a equation to work with we can use Euler's method to get a numerical approximation. \todo{Kanske berätta hur luftmotståndsmodellen funkar först (att det är motsat riktningen och = ky), känns lite omotiverat i den här meningen varför man skulle vilja göra det}
+	Air resistance is in some way proportional to the velocity of the object and directed in the direction opposite to the current movement. For our algorithm this means that at every time interval $\Delta\,t$ we want to apply a force on our object in an angle opposite to $\beta$ in some way proportional to our velocity $v$.
 	
 	Let $F_D$ be the force in the opposite direction of that which our object is traveling. At a time interval $\Delta t$ we will add a drag velocity $v_{drag}$ to our total velocity vector $v$.
 	\begin{align}\nonumber
 		\vec{v}_{new} = \vec{v}_{old} + \vec{v}_{drag}
 	\end{align}
-	In order to extrapolate \todo{Är det verkligen extrapolate} $\vec{v}_{drag}$ from $F_D$ we need to consider our objects mass which we will denote $m$. This is due to 
+	In order to determine $\vec{v}_{drag}$ from $F_D$ we need to consider our objects mass which we will denote $m$. This is due to 
 	\begin{align}\nonumber
 		\vec{F}=m\vec{a} = m\frac{\Delta\,\vec{v}}{\Delta\,t}\implies \Delta \vec{v} = \frac{\vec{F} \cdot \Delta\,t}{m} = \vec{v}_{drag}
 	\end{align}
-	This means is that the air resistance is inversely proportional the object's mass. While this might seem counterintuitive at first it is important to remember that a system with a higher mass means that the total energy of the system goes up \todo{of the system increases}. It is therefore only \todo{Tycker inte only behövs} logical that our object travels further with higher mass; there is nowhere else for the extra energy to go. One can also consider conservation of momentum in terms of the air mass.
+	This means is that the air resistance is inversely proportional the object's mass. While this might seem counterintuitive at first it is important to remember that a system with a higher mass means that the total energy of the system increases. It is therefore logical that our object travels further with higher mass; there is nowhere else for the extra energy to go. One can also consider conservation of momentum in terms of the air mass.
 	\\~\\
 	$\vec{F}_D$ is given by the quadratic drag equation
 	\begin{align}\nonumber
@@ -420,7 +405,6 @@ reprint,%
 			-0.5\,\rho\,A\,C_D\,v\,v_y\,m^{-1}\,\Delta\,t
 		\end{bmatrix}
 	\end{align}
-	\todo{Känns som det händer rätt mycket i det där steget}
 	where $\rho$ is the air density, $A$ is the frontal area of our projectile, $m$ is the mass of the object and $C_D$ is the coefficient of drag which depends on the shape of our projectile. As $\Delta \rightarrow 0$ our calculations will be more computationally intensive but have greater accuracy.
 	\subsection{Algorithm}
 	We want a way to numerically apply a force to an object at every time interval and keep track of its velocity and position. The algorithm used can be summarized as the following.
@@ -469,24 +453,22 @@ reprint,%
 		\end{axis}
 		\end{tikzpicture}
 	\end{center}
-	\todo{Kanske är lite jobbigt, men du borde kanske ha typ en fil per plot som man kan kolla på som läsare}
 	The full code is available at GitHub\cite{code} and mostly contained in \texttt{math.js}. Algorithm \ref{alg:airResistance} can be found in the functions \texttt{getAirResistanceData()} and \texttt{getAirResistance()}.
 	\section{Analytical solution to one-dimensional air resistance}\label{seq:oneDim}
 	\subsection{Derivation}\label{seq:oneDimIntro}
-	\todo{Du börjar bli mindre rigorös, men att det är jobbigt 8och möjligtvis onödigt att vara det hela tiden}
-	Consider the simplest case of air resistance; the one-dimensional falling object. Our object does not travel in a parabola \todo{Du skulle kunna säga att det är för att x(t) = 0} and we have previously described this motion as $y(t) = -\frac12gt^2+y_0$. Knowing the air resistance at any time $t$ we can construct a differential equation describing the motion of our object which is as follows \todo{Tycker inte which is utan bara as follows}
+
+	Consider the simplest case of air resistance; the one-dimensional falling object. Our object does not travel in a parabola and we have previously described this motion as $y(t) = -\frac12gt^2+y_0$. Knowing the air resistance at any time $t$ we can construct a differential equation describing the motion of our object
 	\begin{align}\label{eq:oneDimAirResDiffEq}
 		y''(t) &= k\,y'(t)^2 - g \comma k = \frac{\frac12\rho\,A\,C_D}{m}\\\nonumber
 		y(0) &= y_0 \comma y'(0) = 0
 	\end{align}
-	\todo{Ska det inte vara g/m?}
 	\subsubsection{Position as a function of time}\label{seq:oneDimYt}
 	We rewrite equation \eqref{eq:oneDimAirResDiffEq} with $v = y'$ and first solve for $v$. We can then determine $y$ as it is the antiderivative of $v$.
 	\begin{align}\nonumber
 		v'(t) = k\,v^2 - g &\implies \frac{v'}{k\, v^2 - g} = 1 \implies\\\label{eq:oneDimAirResGSolve}
 		\int \frac{v'}{k\, v^2 - g}\,dt &= \int 1 \,dt = t + C := G
 	\end{align}
-	$C$ is a constant of integration which is added to $t$ at all times. Let $T = t + C \comma v' = \frac{dv}{dt}$. $G$ can now be written as the following in order to concentrate the unknowns \todo{Aldrig hört concentrate the unknowns formuleringen antar att det betyder att man vill samla dem?}
+	$C$ is a constant of integration which is added to $t$ at all times. Let $T = t + C \comma v' = \frac{dv}{dt}$. $G$ can now be written as the following in order to concentrate the unknowns
 	\begin{align}\nonumber
 		G=\int \frac{1}{k\, v^2-g}\,dv &= \int -\frac{1}{g(1-\frac{k\,v^2}{g})}\,dv \\\nonumber
 		&= \int \frac{-1}{g} \frac{1}{1-\frac{k\,v^2}{g}}\,dv
@@ -507,7 +489,7 @@ reprint,%
 	\begin{align}\nonumber
 		y = \int v\,dt = -\sqrt{\frac{g}{k}}\,\int \tanh(\sqrt{gk}\,t)\,dt
 	\end{align}
-	For simplicity; let $H = \int \tanh(\sqrt{gk}\,t)\,dt, c = \sqrt{gk}, s = c\,t \implies \frac{ds}{dt} = c \implies dt = \frac{ds}{c}$. The integral is now trivial and we can substitute back $s$ after evaluating it.\todo{Istället för det här resonemanget skulle du bara kunna hänvisa till kedjeregeln och därför dela med sqrt(gk). integral(tanh(x)dx) = ln(cosh(x)) => integral(tanh(kx)dx) = ln(cosh(kx))/k}
+	For simplicity; let $H = \int \tanh(\sqrt{gk}\,t)\,dt \comma c = \sqrt{gk} \comma s = c\,t \implies \frac{ds}{dt} = c \implies dt = \frac{ds}{c}$. The integral is now trivial and we can substitute back $s$ after evaluating it.
 	\begin{align}\nonumber
 		H = \int \tanh(s)\, \frac{ds}{c} &= \frac{1}{c} \ln(\cosh(s)) + y_0\\\nonumber
 		&= \frac{\ln(\cosh(c\,T))}{c}+y_0
@@ -571,8 +553,7 @@ reprint,%
 		t_{max} &= \frac{v_0\sin\theta}{g}+\frac{\sqrt{v_{0}^2\sin^2\theta+2g\,y_0}}{g}\\\nonumber
 		&= \frac{\sqrt{2\,g\,y_0}}{g} = \frac{\sqrt{78.56}}{9.82} \approx 0.90\,s
 	\end{align}
-	This is a major discrepancy which adds credit to the accuracy of equation \eqref{eq:oneDimAirResTMax}.
-	\todo{Fast det säger ju ingenting förren du jämfört med verjligheten}
+	This increase of approximately $30\,\%$ matches our physical intuition for such a large object and adds credit to the accuracy of equation \eqref{eq:oneDimAirResTMax}.
 	We can plot another $y(t)$ where $k$ is much smaller which should result in our object not reaching its terminal velocity in such short time. The following measurements are from a small steel ball with $k = 0.00313$.
 	\begin{align}\nonumber
 		\begin{cases}\nonumber
@@ -594,7 +575,7 @@ reprint,%
 		\end{axis}
 		\end{tikzpicture}
 	\end{center}
-	Here equation \eqref{eq:tMaxFromHeight} gives $t_{max} = 0.7817\,s$, equation \eqref{eq:oneDimAirResTMax} gives $t_{max} = 0.7830\,s$ \todo{Behövs såhär många värdesiffror?} and the plot gives $t_{max} = 0.7829\,s$. Air resistance plays almost no part here and the dashed plot is nearly indistinguishable from the solid one.
+	Here equation \eqref{eq:tMaxFromHeight} gives $t_{max} = 0.7817\,s$, equation \eqref{eq:oneDimAirResTMax} gives $t_{max} = 0.7830\,s$ and the plot gives $t_{max} = 0.7829\,s$. Air resistance plays almost no part here and the dashed plot is nearly indistinguishable from the solid one.
 	\subsubsection{Analysis}
 	As the second example showed it is mainly the terminal velocity which causes the lower overall velocity of a falling object with air resistance compared to one in a vacuum. This is a logical consequence of the fact that the mass of the air displaced by a falling body generally is small compared to that of the falling object.
 	\\~\\
@@ -610,17 +591,16 @@ reprint,%
 		\end{bmatrix}\implies  \\\nonumber
 		u' &= -kvu \comma w' = -kvw-g\,\,\,\,\,
 	\end{align}
-	where $v = ||\vec{v}|| = \sqrt{u^2+w^2}$ and $\alpha$ is the angle the object is traveling in at an \todo{any?} arbitrary time. This means that $u$ is dependent on $w$ and the other way around. In order to work around this we need to make approximations regarding the relationship between $u$ and $w$ to eliminate $v$ from their differential equations of motion. The following three options are the ways to express $v$ in terms of only one variable.
+	where $v = ||\vec{v}|| = \sqrt{u^2+w^2}$ and $\alpha$ is the angle the object is traveling in at an arbitrary time. This means that $u$ is dependent on $w$ and the other way around. In order to work around this we need to make approximations regarding the relationship between $u$ and $w$ to eliminate $v$ from their differential equations of motion. The following three options are the ways to express $v$ in terms of only one variable.
 	\begin{align}\nonumber
 		v \approx
 		\begin{cases}
-			u			&if\,\,\, u \gg w\\
-			w			&if\,\,\, w \gg w\\
-			\sqrt{2}u	&if\,\,\, u \approx w\\
+			u			&\textrm{if}\,\,\, u \gg w\\
+			w			&\textrm{if}\,\,\, w \gg w\\
+			\sqrt{2}u	&\textrm{if}\,\,\, u \approx w\\
 		\end{cases}\\\nonumber
 	\end{align}
-	\todo{Känns konstigt att du använda mycket mer än och sedan ungefär lika med, vad ska man göra där emellan? Kanske bara borde vara >}
-	We treat these as three separate cases and label them as LAT, HAT and SAT for Low Angle Trajectory, High Angle Trajectory and Split Angle Trajectory respectively.
+	We treat these as three separate cases and label them as LAT, HAT and SAT for Low Angle Trajectory, High Angle Trajectory and Split Angle Trajectory respectively. At times none of these approximations may be applicable which is their weakness. Additional cases such as $v \approx \sqrt{5}u \,\, \textrm{if} \,\, u \approx 2w$ could be considered but their derivation would be nearly identical to that of $v \approx \sqrt{5}u$.
 	\subsection{Low Angle Trajectory approximation}\label{seq:lat}
 	\subsubsection{Differential equations of motion}
 	With a low angle trajectory we assume $v \approx u$ since $u \gg w$. Subsequently our differential equations of motion become the following.
@@ -637,7 +617,7 @@ reprint,%
 	u &= \frac{1}{kt-C} \comma u(0) = u_0 \implies u_0 = \frac{-1}{C} \implies\\\label{eq:twoDimU}
 	C &= \frac{-1}{u_0} \implies u = \frac{u_0}{u_0kt+1}
 	\end{align}
-	We can now plus \todo{plug?} $u$ from equation \eqref{eq:twoDimU} into equation \eqref{eq:twoDimEMOLATW} and solve for $w$.
+	We can now plug $u$ from equation \eqref{eq:twoDimU} into equation \eqref{eq:twoDimEMOLATW} and solve for $w$.
 	\begin{align}\nonumber
 		w' = -kuw-g = \frac{-ku_0w}{u_0kt+1}-g
 	\end{align}
@@ -653,7 +633,6 @@ reprint,%
 		&= -g\,\int \mu\,dt = w\,\mu+c_1 = -g(\frac{at^2}{2}+t)+c_2\implies\\\nonumber
 		w &= \frac{-g(\frac{at^2}{2}+t)+C}{\mu} = \frac{-gat^2}{2\mu}-\frac{gt}{\mu}+\frac{C}{\mu}
 	\end{align}
-	\todo{\^ tycker det bli lite confusing när du blandar mellan leden så mycket. Asså om a = b förenklar du b och sedan skriver = a och sedan förenklar a osv.}
 	Solving for the initial condition $w(0) = w_0$ we obtain our final expression for $w$.
 	\begin{align}\nonumber
 		w(0) &= \frac{C}{a\cdot 0+1} = w_0 \implies C = w_0 \implies\\\nonumber
@@ -669,7 +648,6 @@ reprint,%
 		&= \frac{\ln s}{k} + C = \frac{\ln(u_0kt+1)}{k} + x_0
 	\end{align}
 	We can solve for $y$ the same way but begin by writing $w$ as a sum of terms and determining its indefinite integral.
-	\todo{fattar inte riktigt vad som händer w = nånting = blir till någon summa. Du multiplicerar in parantesen, separerar termerna och sen kastar om?}
 	\begin{align}\nonumber
 		w &= \frac{-gt(\frac{at}{2}+1)+w_0}{at+1} = \frac{2aw_0+g}{2a(at+1)}-\frac{g}{2a}-\frac{gt}{2}\\\nonumber
 		y &= \int w\,dt = \int \Big(\frac{2aw_0+g}{2a(at+1)}-\frac{g}{2a}-\frac{gt}{2}\Big)\,dt \\\nonumber
@@ -690,9 +668,7 @@ reprint,%
 	\begin{align}\label{eq:twoDimEOMDIFFBASE}
 		u' = -ku|w| \comma w' -k|w|w-g
 	\end{align}
-	\todo{vart kommer absarna ifrån?}
-	In contrary to our LAT approximation in section \ref{seq:lat} we must now separate the cases where $\hat{w} = \hat{\jmath}, \hat{w} = -\hat{\jmath}$ \todo{är w ens en vektor?} because a negative $w$ should not lead to a positive $u'$ \todo{det gör det ju inte i o m abs?}. When $v$ was approximated as $u$ we assumed that $\hat{u} = \hat{\imath}$ because it is the only realistic scenario. Now that $v$ is approximated as $w$ we need to consider its direction before that context. In the end our equations of motions will consist of two separate $u$ and $w$.
-	\todo{Som du kanske märkt så fattar jag inte riktigt ditt resonemang ovan stycke :) }
+	In contrary to our LAT approximation in section \ref{seq:lat} we must now separate the cases where $w \geq 0\comma w < 0$ because a negative $w$ should not lead to a positive $u'$ and we can not solve differential equation containing an absolute value. When $v$ was approximated as $u$ we assumed that $u > 0$ because it is the only realistic scenario. Now that $v$ is approximated as $w$ we need to consider its direction first. In the end our equations of motions will consist of two separate $u$ and $w$.
 	\subsubsection{Differential equations of motion}
 	The following are all the differential equations of motion derived from equation \eqref{eq:twoDimEOMDIFFBASE} and separated by ascending and descending.
 	\begin{align}\label{eq:twoDimEOMHATUP}
@@ -702,14 +678,14 @@ reprint,%
 		w_{-}' &=  kw^2 -g \comma w_-(0) = w_{-0}
 	\end{align}
 	\subsubsection{Ascending velocity}
-	For the purpose of this section we will drop the "$+$" postfix \todo{u+ och w+ blir alltså u och w? Kanske skulle kunna göras tydligare}. We begin by solving equation \eqref{eq:twoDimEOMHATWP} in order to be able to express equation \eqref{eq:twoDimEOMHATUP} as a function of one variable \todo{Det är väl bara en variabel t eller menar du bara u eller w? Osäker på om det heter variabler i diff-ekkar}. This is the same as equation \eqref{eq:oneDimAirResGSolve} with the only difference being the sign of $k\,v^2$. It can be shown that using the same technique as that in section \ref{seq:oneDimYt} we can derive equation \eqref{eq:oneDimAirResVT} but with $\tan(\sqrt{gk}\,T)$ instead of $\tanh(\sqrt{gk}\,T)$. From here we can solve for our initial condition $w(0) = w_0$.
+	For the purpose of this section we will drop the "$+$" postfix since we only consider $u_{+}$ and $w_{+}$. We begin by solving equation \eqref{eq:twoDimEOMHATWP} in order to be able to express equation \eqref{eq:twoDimEOMHATUP} as a function of one variable. This is the same as equation \eqref{eq:oneDimAirResGSolve} with the only difference being the sign of $k\,v^2$. It can be shown that using the same technique as that in section \ref{seq:oneDimYt} we can derive equation \eqref{eq:oneDimAirResVT} but with $\tan(\sqrt{gk}\,T)$ instead of $\tanh(\sqrt{gk}\,T)$. From here we can solve for our initial condition $w(0) = w_0$.
 	\begin{align}\nonumber
 		w &= -\sqrt{\frac{g}{k}}\,\tan(\sqrt{gk}\,(t + C))\\\nonumber
 		w_o &= -\sqrt{\frac{g}{k}}\,\tan(\sqrt{gk}\,C) \implies\\\nonumber
 		C &= \frac{-\arctan\big(w_0\sqrt{\frac{k}{g}}\big)}{\sqrt{gk}} \implies\\\label{eq:twoDimEOMHATWPSOLVE}
 		w &= \sqrt{\frac{g}{k}}\,\tan\big(\arctan\big(w_0\sqrt{\frac{k}{g}}\big) - \sqrt{gk}\,t\big)
 	\end{align}
-	Having solved for $w$ we can now solve equation \eqref{eq:twoDimEOMHATUP} for $u$. To shorten equation \eqref{eq:twoDimEOMHATWPSOLVE} we let $\omega = \sqrt{gk} \comma \varphi = \arctan\big(w_0\sqrt{\frac{k}{g}}\big)$. We can compress the constants as $-k\sqrt{\frac{g}{k}} = -\omega$.
+	Having solved for $w$ we can now solve equation \eqref{eq:twoDimEOMHATUP} for $u$. To shorten equation \eqref{eq:twoDimEOMHATWPSOLVE} we let $\omega = \sqrt{gk} \comma \varphi = \arctan\big(w_0\sqrt{\frac{k}{g}}\big)$. We can simplify the constants as $-k\sqrt{\frac{g}{k}} = -\omega$.
 	\begin{align}\nonumber 
 		u' &= -ukw = -u\omega\tan(\varphi-\omega\,t) \implies\\\nonumber
 		\int\frac{\frac{du}{dt}}{u}\,dt &= \int-\omega\tan(\varphi-\omega t)\,dt = \\\nonumber
@@ -732,7 +708,7 @@ reprint,%
 		C &= \frac{-x_0\omega}{u_0\cos\varphi}-\ln(\tan\varphi+\sec\varphi) \implies\\\label{eq:twoDimHATXFIN}
 		x &= \frac{-u_0\cos\varphi}{\omega}\,\ln\Bigg\lbrack\frac{\tan(\varphi-\omega t)+\sec(\varphi-\omega t)}{\tan\varphi+\sec\varphi}\Bigg\rbrack +x_0
 	\end{align}
-	For $y$ the procedure is essentially the same. \todo{we perform essentially the same procedure? (inte så stor skillnad men tycker det låter bättre)}
+	For $y$ we perform essentially the same procedure.
 	\begin{align}\nonumber
 		y &= \int w \,dt = \int \sqrt{\frac{g}{k}} \tan(\varphi - \omega t)\,dt\\\nonumber
 		&= \sqrt{\frac{g}{k}} \int \tan s \,dt = \frac{\sqrt{\frac{g}{k}}}{-\omega} \int \tan s\,ds\\\nonumber
@@ -746,7 +722,7 @@ reprint,%
 		u_{-}(0) &= u_{+}(t_{turn})\\\nonumber
 		w_{-}(0) &= w_{+}(t_{turn})
 	\end{align}
-	Here $t_{turn}$ is defined as $w_+(t_{turn}) = \omega\,t_{turn}-\varphi = 0$ i.e. $t_{turn} = \frac{\varphi}{\omega}$. We can introduce the variable $\tau$ and define it as $\tau = t-t_{turn}$ meaning when $t = t_{turn} \comma \tau = 0$ and let $u_{-}$ and $w_{-}$ be functions of $\tau$. \todo{du omdefinierar u- och w- som funktioner av tau? Du kanske borde använda stor U och W t.ex} We begin by solving $u_+(t_{turn})$ and $w_+(t_{turn})$ for our initial conditions.
+	Here $t_{turn}$ is defined as $w_+(t_{turn}) = \omega\,t_{turn}-\varphi = 0$ i.e. $t_{turn} = \frac{\varphi}{\omega}$. We can introduce the variable $\tau$ and define it as $\tau = t-t_{turn}$ meaning when $t = t_{turn} \comma \tau = 0$ and let $u_{-}$ and $w_{-}$ be functions of $\tau$. We begin by solving $u_+(t_{turn})$ and $w_+(t_{turn})$ for our initial conditions.
 	\begin{align}\nonumber
 		u_+(t_{turn}) &= \frac{u_0\cos\varphi}{\cos(\varphi-\varphi)} = u_0\cos\varphi\\\nonumber
 		w_+(t_{turn}) &= \sqrt{\frac{g}{k}}\tan(\varphi-\varphi) = 0
@@ -762,16 +738,15 @@ reprint,%
 		\ln u &= \frac{\omega}{\omega}\ln(\cosh(\omega\tau)) + c_1 \implies u = e^{c_1}\sech(\omega\tau)\\\label{eq:twoDimHATMUFIN}
 		u(0) &= u_0\cos\varphi \implies u = u_0\cos\varphi\sech(\omega\tau)
 	\end{align}
-	\todo{Tycker det börjar bli lite vagt (you lost me) i den här sektionen}
 	\subsubsection{Descending position}
-	We adopt the same conventions detailed in section \ref{seq:twoDimDesVel} regarding $\tau$.\todo{Räcker med same definition of tau? Är det verkligen en convention?} For our position functions we take the antiderivative of equation \eqref{eq:twoDimHATMWFIN} and equation \eqref{eq:twoDimHATMUFIN}. We want $x_{-}(0) = x_{+}(t_{turn})$ and $y_{-}(0) = y_{+}(t_{turn})$. To determine these initial conditions we plug $t = \frac{\varphi}{\omega}$ into equation \eqref{eq:twoDimHATXFIN} and equation \eqref{eq:twoDimHATYFIN}.
+	We adopt the same conventions detailed in section \ref{seq:twoDimDesVel} regarding $\tau$. For our position functions we take the antiderivative of equation \eqref{eq:twoDimHATMWFIN} and equation \eqref{eq:twoDimHATMUFIN}. We want $x_{-}(0) = x_{+}(t_{turn})$ and $y_{-}(0) = y_{+}(t_{turn})$. To determine these initial conditions we plug $t = \frac{\varphi}{\omega}$ into equation \eqref{eq:twoDimHATXFIN} and equation \eqref{eq:twoDimHATYFIN}.
 	\begin{align}\nonumber
 		x_{+}(\frac{\varphi}{\omega}) &= \frac{-u_0\cos\varphi}{\omega}\,\ln\Bigg\lbrack\frac{\tan(\varphi-\varphi)+\sec(\varphi-\varphi)}{\tan\varphi+\sec\varphi}\Bigg\rbrack +x_0 \\\label{eq:twoDimHATDXTURN}
 		&= \frac{-u_0\cos\varphi}{\omega}\,\ln\Bigg\lbrack\frac{1}{\tan\varphi+\sec\varphi}\Bigg\rbrack +x_0\\\nonumber
 		y_{+}(\frac{\varphi}{\omega}) &= \frac{1}{k}\ln\Bigg\lbrack\frac{\cos(\varphi-\varphi)}{\cos\varphi}\Bigg\rbrack+y_0\\\label{eq:twoDimHATDYTURN}
 		&= \frac{1}{k}\ln\Bigg\lbrack\frac{1}{\cos\varphi}\Bigg\rbrack+y_0
 	\end{align}
-	We can now drop the $-$ and $+$ postfixes and solve equation \eqref{eq:twoDimHATMUFIN} for $x$.\todo{Asså jag är inte helt med på det här med att droppa postfixes. Fattar inte riktigt varför man ska göra det och vad det betyder (att t.ex w- = w så vi kan lika gärna skriva w eller att vi vill studera w- men inte orkar skriva hela så bara skriver w)}
+	We can now drop the $-$ and $+$ postfixes and solve equation \eqref{eq:twoDimHATMUFIN} for $x$.
 	\begin{align}\nonumber
 		x &= \int u\,d\tau = \int u_0\cos\varphi\sech(\omega\tau)\,d\tau\\\nonumber
 		&= u_0\cos\varphi\int\sech(\omega\tau)\,d\tau
@@ -812,10 +787,8 @@ reprint,%
 		y_{-}(\tau) &= \frac{1}{k}\ln\Big(\frac{1}{\cos\varphi\cosh(\omega\tau)}\Big)+y_0\\\nonumber
 		&\mathrm{where}\,\,\omega = \sqrt{gk} \comma \varphi = \arctan\big(w_0\sqrt{\frac{k}{g}}\big) \comma \tau = t - \frac{\varphi}{\omega}
 	\end{align*}
-	\todo{Okej tau är en funktion av t. Tycker nästan du borde skriva att t.ex x- är en funktion av t och sedan låta tau vara där, men det kanske bara är min preference.}
 	%https://www.desmos.com/calculator/c2hjn8trb7 (x(t))
 	%https://www.desmos.com/calculator/krqw78ami5 (y(t))
-	\todo{Nice att du kunde återanvända}
 	\subsection{Split Angle Trajectory approximation}
 	\subsubsection{Differential equations of motion}
 	When considering SAT:s we assume $u\approx w$. We can therefore decouple $u$ and $w$ and arrive at far easier differential equations of motion.
@@ -874,7 +847,7 @@ reprint,%
 		\end{axis}
 		\end{tikzpicture}
 	\end{center}
-	\todo{Bra att du har lite analys av resultaten} As shown in the graph the discrepancy starts appearing when $u \approx w$ and grows further when $w \approx 0$. This is a inherent fault in the HAT approximations as it always assumes that $v \approx w$. At $t = 2.5$ the object is once again falling with $v \approx w$ and the discrepancy doesn't increase further. A possible solution to this would be to use a step function to switch to SAT or LAT approximations when $w \not\approx v$. One could derive expressions for $t_1$ when $u \approx w$, $t_2$ when $w \approx v$ and so forth. While this would be possible the $n$:th step functions initial conditions would depend on the $(n-1)$:th values at $t=t_n$. This would not be too dissimilar from the usage of $\tau$ for the HAT approximation although as $n$ grows larger the expressions would get harder to deal with and at that point it might be more worthwhile to use a purely numerical approximation instead. The difference in range is $0.23\,m = 7.5\,\%$. \todo{Om HAT alltid ger längre kanske man kan fitta den? Om f(t) är hat kanske man kan hitta en funktion av t typ f(0.9t) (om felet är linjärt)}
+	As shown in the graph the discrepancy starts appearing when $u \approx w$ and grows further when $w \approx 0$. This is a inherent fault in the HAT approximations as it always assumes that $v \approx w$. At $t = 2.5$ the object is once again falling with $v \approx w$ and the discrepancy doesn't increase further. A possible solution to this would be to use a step function to switch to SAT or LAT approximations when $w \not\approx v$. One could derive expressions for $t_1$ when $u \approx w$, $t_2$ when $w \approx v$ and so forth. While this would be possible the $n$:th step functions initial conditions would depend on the $(n-1)$:th values at $t=t_n$. This would not be too dissimilar from the usage of $\tau$ for the HAT approximation although as $n$ grows larger the expressions would get harder to deal with and at that point it might be more worthwhile to use a purely numerical approximation instead. The difference in range is $0.23\,m = 7.5\,\%$.
 	\subsubsection{Split Angle Trajectory}
 	Consider the case where $\theta = \frac{\pi}{4} \implies u_0 \approx 7.07\,m/s \comma w_0 \approx 7.07\,m/s$.
 	\begin{center}
@@ -900,7 +873,7 @@ reprint,%
 	\begin{align}\nonumber
 		t=\frac{f_t-f_0}{f_r}
 	\end{align}
-	where $t$ is the time, $f_r$ is the frame rate of the camera, $f_0$ is the initial frame and $f_t$ is the frame in which the object touches the ground. In the experiment two different heights were both tested twice in order to obtain a \todo{an} average time. The two heights were measured to be $4.91\,m$ and $8.68\,m$. The object used was a pilates ball with the following properties:
+	where $t$ is the time, $f_r$ is the frame rate of the camera, $f_0$ is the initial frame and $f_t$ is the frame in which the object touches the ground. In the experiment two different heights were both tested twice in order to obtain an average time. The two heights were measured to be $4.91\,m$ and $8.68\,m$. The object used was a pilates ball with the following properties:
 	\begin{align}
 		\begin{cases}\nonumber
 			C_D &= 0.47 \\
@@ -926,9 +899,9 @@ reprint,%
 	\end{table}
 	At Height 1 the difference in time between the experimental analytical results and the is $0.01\,s$ and at Height 2 the difference is $0.04\,s$.
 	\subsection{Analysis}
-	While the discrepancy \todo{använder man discrepancy såhär?} between the experimental result and the analytical model result grew as the height increased the difference stayed negligible but the difference compared to the vacuum model grew. At $8.68\,m$ the vacuum model is no longer a viable option to accurately describe the path of the object. The difference $0.04\,s$ can be partially accounted for by the difficulty in determining the exact time at which the object was dropped. Instead of using a human to drop the object and a human to film the sensor \todo{film the sensor? Film the fall kanske} a better alternative would be a electronically controlled holder connected to a computer and a photosensor at the bottom, also connected to the same computer. The coefficient of drag of a sphere is also hard to determine exactly. Some\cite{c_d} say the coefficient is $0.5$ instead of $0.47$ which decreases the discrepancy for the second fall by roughly $25\,\%$ \todo{Du skulle kunna säga att det inte är en perfect sphere också (har den inte räfflor på sidan och sånt, blir säkert lite deformerad i luften osv.)}. Redoing the experiment in a lab could improve the accuracy as minor winds or unpredictable levels or air density could be avoided. In conclusion it is impossible to say the analytical air resistance model developed has a fundamental error and if any further tweaking were to take place a deeper analysis of the thrown object would be required. The numerical model approached the analytical one in terms of results as $\Delta \rightarrow 0$. \todo{vem hade kunnat trott det? Nejmen du skulle kunna säga att det är för att de är från samma diff.ek}
+	While the discrepancy between the experimental result and the analytical model result grew as the height increased the difference stayed negligible but the difference compared to the vacuum model grew. At $8.68\,m$ the vacuum model is no longer a viable option to accurately describe the path of the object. The difference $0.04\,s$ can be partially accounted for by the difficulty in determining the exact time at which the object was dropped. Instead of using a human to drop the object and a human to film the fall a better alternative would be a electronically controlled holder connected to a computer and a photosensor at the bottom, also connected to the same computer. The coefficient of drag of a sphere is also hard to determine exactly. Some\cite{c_d} say the coefficient is $0.5$ instead of $0.47$ which decreases the discrepancy for the second fall by roughly $25\,\%$. Redoing the experiment in a lab could improve the accuracy as minor winds or unpredictable levels or air density could be avoided. In conclusion it is impossible to say the analytical air resistance model developed has a fundamental error and if any further tweaking were to take place a deeper analysis of the thrown object would be required. The numerical model approached the analytical one in terms of results as $\Delta \rightarrow 0$ since they are derived from the same differential equation adding credibility to the analytical solution.
 	\section{Conculsions}
-	We have derived the equations of motion for projectile motion and determined some properties of it. These results are testable and exact under the conditions specified. We have developed analytical solutions to one dimensional quadratic air resistance and produced testable predictions which were tried in an experiment and no fundamental errors could be detected. The solutions were developed into two dimensions with approximations to keep the solutions purely analytical. These approximations were compared to numerical solutions and evaluated. While discrepancies could be found they were acceptable in size \todo{beror kanske på vad man ska göra med resultatet :)}.
+	We have derived the equations of motion for projectile motion and determined some properties of it. These results are testable and exact under the conditions specified. We have developed analytical solutions to one dimensional quadratic air resistance and produced testable predictions which were tried in an experiment and no fundamental errors could be detected. The solutions were developed into two dimensions with approximations to keep the solutions purely analytical. These approximations were compared to numerical solutions and evaluated. While discrepancies could be found they were acceptable in size.
 	\begin{thebibliography}{7}
 		\bibitem{optimalangle} 
 		Peter Chudinov. \textit{An optimal angle of launching a point mass in a medium with quadratic drag force}.

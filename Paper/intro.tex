@@ -1,11 +1,5 @@
 \documentclass[a4paper,12pt,abstracton,titlepage]{scrartcl}
 
-%\usepackage[T1]{fontenc}
-%\usepackage{lmodern}
-%\usepackage[utf8]{inputenc}
-%\usepackage[english]{babel}
-
-
 \usepackage{graphicx}
 \usepackage{dcolumn}
 \usepackage{bm}
@@ -34,9 +28,7 @@
 \publishers{
 	\normalfont\normalsize
 	\parbox{0.8\linewidth}{
-		\todo{Du kommer antagligen tycka att jag ger för många komman i mina exempel, men du får ignorera dem :)}
-		The equations of motion for normal \todo{Borde det vara normal? Är det tillräckligt tydligt vad det betyder? Alternativ skulle vara basic?} projectile motion are derived. Some properties of such motion are defined. \todo{Merga till en mening? and some of its properties are defined...}
-		\todo{är properties defined? Är de inte determined?} Numerical approximations and analytical solutions to the effects \todo{Borde det vara effects? Kan man säga solutions to effects (lösningar av effekter)} of one dimensional quadratic air resistance are made and compared to experimental results with small error. \todo{Tycker inte man kan säga att de comparades med small error. Föreslår typ... compared to experimental results, producing small error }\todo{Tycker dock hela meningen borde vara typ: One dimensional quadratic air resistance is studied and modeled using numerical and analytical methods and compared to experimental results, producing small error (Det kanske inte är bra, men tycker den kanske borde omformuleras lite)} Analytical approximations to two dimensional quadratic air resistance are made using a model which separates low, high and split angle trajectories. The equations of motion for these are derived, plotted and compared to numerical solutions to the original differential equation. \todo{Här introducerar du plötsligt diff. ekvationer. Kanske borde stå i meningen innan "are modeled (eller described) using differential equations"}
+		The equations of motion for normal projectile motion are derived and some properties of such motion are determined. One dimensional quadratic air resistance is studied and modeled using numerical and analytical methods and compared to experimental results, producing negligible discrepancies. Analytical approximations to two dimensional quadratic air resistance are made using a model which separates low, high and split angle trajectories. The equations of motion for these are derived, plotted and compared to numerical solutions to the original differential equation.
 	}
 }
 
@@ -45,66 +37,66 @@
 	\maketitle
 	\clearpage
 	
-	\todo{Har du gjort det här manuellt? Hoppas det är något script eller nåt}
-	\contentsline {section}{\numberline {1}Introduction}{1}{}
-	\contentsline {section}{\numberline {2}Trajectory}{1}{}
-	\contentsline {subsection}{\numberline {2.1}Acceleration}{2}{}
-	\contentsline {subsection}{\numberline {2.2}Velocity}{2}{}
-	\contentsline {subsection}{\numberline {2.3}Position}{2}{}
-	\contentsline {subsection}{\numberline {2.4}Parabola}{2}{}
-	\contentsline {section}{\numberline {3}Properties of a projectile parabola}{2}{}
-	\contentsline {subsection}{\numberline {3.1}Time to highest point}{2}{}
-	\contentsline {subsection}{\numberline {3.2}Highest point}{3}{}
-	\contentsline {subsection}{\numberline {3.3}Range of projectile}{3}{}
-	\contentsline {subsection}{\numberline {3.4}Optimal angle for maximum range}{3}{}
-	\contentsline {subsection}{\numberline {3.5}Velocity at a given time}{3}{}
-	\contentsline {subsection}{\numberline {3.6}Angle of impact}{3}{}
-	\contentsline {section}{\numberline {4}Choosing initial values to match result values}{3}{}
-	\contentsline {subsection}{\numberline {4.1}Delimitations}{3}{}
-	\contentsline {subsection}{\numberline {4.2}Specific projectile range}{4}{}
-	\contentsline {subsection}{\numberline {4.3}Hitting a specific coordinate}{4}{}
-	\contentsline {subsubsection}{\numberline {4.3.1}Predetermined speed}{4}{}
-	\contentsline {subsubsection}{\numberline {4.3.2}Predetermined angle}{4}{}
-	\contentsline {section}{\numberline {5}Longest parabola starting at height}{5}{}
-	\contentsline {subsection}{\numberline {5.1}Expression for range}{5}{}
-	\contentsline {subsection}{\numberline {5.2}Algorithm}{5}{}
-	\contentsline {section}{\numberline {6}Computational approach to air resistance}{6}{}
-	\contentsline {subsection}{\numberline {6.1}Change at every time interval}{6}{}
-	\contentsline {subsection}{\numberline {6.2}Algorithm}{7}{}
-	\contentsline {section}{\numberline {7}Analytical solution to one-dimensional air resistance}{7}{}
-	\contentsline {subsection}{\numberline {7.1}Derivation}{7}{}
-	\contentsline {subsubsection}{\numberline {7.1.1}Position as a function of time}{7}{}
-	\contentsline {subsubsection}{\numberline {7.1.2}Determining the duration of the fall}{8}{}
-	\contentsline {subsubsection}{\numberline {7.1.3}Terminal velocity}{8}{}
-	\contentsline {subsection}{\numberline {7.2}Plots}{8}{}
-	\contentsline {subsubsection}{\numberline {7.2.1}Examples}{8}{}
-	\contentsline {subsubsection}{\numberline {7.2.2}Analysis}{9}{}
-	\contentsline {section}{\numberline {8}Analytical approximations to two-dimensional air resistance}{9}{}
-	\contentsline {subsection}{\numberline {8.1}Introduction}{9}{}
-	\contentsline {subsection}{\numberline {8.2}Low Angle Trajectory approximation}{10}{}
-	\contentsline {subsubsection}{\numberline {8.2.1}Differential equations of motion}{10}{}
-	\contentsline {subsubsection}{\numberline {8.2.2}Velocity}{10}{}
-	\contentsline {subsubsection}{\numberline {8.2.3}Position}{10}{}
-	\contentsline {subsubsection}{\numberline {8.2.4}Equations of motion}{11}{}
-	\contentsline {subsection}{\numberline {8.3}High Angle Trajectory approximation}{11}{}
-	\contentsline {subsubsection}{\numberline {8.3.1}Differential equations of motion}{11}{}
-	\contentsline {subsubsection}{\numberline {8.3.2}Ascending velocity}{11}{}
-	\contentsline {subsubsection}{\numberline {8.3.3}Ascending position}{11}{}
-	\contentsline {subsubsection}{\numberline {8.3.4}Descending velocity}{12}{}
-	\contentsline {subsubsection}{\numberline {8.3.5}Descending position}{12}{}
-	\contentsline {subsubsection}{\numberline {8.3.6}Equations of motion}{13}{}
-	\contentsline {subsection}{\numberline {8.4}Split Angle Trajectory approximation}{13}{}
-	\contentsline {subsubsection}{\numberline {8.4.1}Differential equations of motion}{13}{}
-	\contentsline {subsubsection}{\numberline {8.4.2}Equations of motion}{13}{}
-	\contentsline {subsection}{\numberline {8.5}Plots}{13}{}
-	\contentsline {subsubsection}{\numberline {8.5.1}Low Angle Trajectory}{13}{}
-	\contentsline {subsubsection}{\numberline {8.5.2}High Angle Trajectory}{14}{}
-	\contentsline {subsubsection}{\numberline {8.5.3}Split Angle Trajectory}{14}{}
-	\contentsline {section}{\numberline {9}Experiment}{14}{}
-	\contentsline {subsection}{\numberline {9.1}Setup}{14}{}
-	\contentsline {subsection}{\numberline {9.2}Results}{15}{}
-	\contentsline {subsection}{\numberline {9.3}Analysis}{15}{}
-	\contentsline {section}{\numberline {10}Conculsions}{15}{}
-	\contentsline {section}{\numberline {}Further reading}{15}{}
+\contentsline {section}{\numberline {1}Introduction}{1}{}
+\contentsline {section}{\numberline {2}Trajectory}{1}{}
+\contentsline {subsection}{\numberline {2.1}Acceleration}{2}{}
+\contentsline {subsection}{\numberline {2.2}Velocity}{2}{}
+\contentsline {subsection}{\numberline {2.3}Position}{2}{}
+\contentsline {subsection}{\numberline {2.4}Parabola}{2}{}
+\contentsline {section}{\numberline {3}Properties of a projectile parabola}{2}{}
+\contentsline {subsection}{\numberline {3.1}Time to highest point}{2}{}
+\contentsline {subsection}{\numberline {3.2}Highest point}{3}{}
+\contentsline {subsection}{\numberline {3.3}Range of projectile}{3}{}
+\contentsline {subsection}{\numberline {3.4}Optimal angle for maximum range}{3}{}
+\contentsline {subsection}{\numberline {3.5}Velocity at a given time}{3}{}
+\contentsline {subsection}{\numberline {3.6}Angle of impact}{3}{}
+\contentsline {section}{\numberline {4}Choosing initial values to match result values}{4}{}
+\contentsline {subsection}{\numberline {4.1}Delimitations}{4}{}
+\contentsline {subsection}{\numberline {4.2}Specific projectile range}{4}{}
+\contentsline {subsection}{\numberline {4.3}Hitting a specific coordinate}{4}{}
+\contentsline {subsubsection}{\numberline {4.3.1}Predetermined speed}{4}{}
+\contentsline {subsubsection}{\numberline {4.3.2}Predetermined angle}{5}{}
+\contentsline {section}{\numberline {5}Longest parabola starting at height}{5}{}
+\contentsline {subsection}{\numberline {5.1}Expression for range}{5}{}
+\contentsline {subsection}{\numberline {5.2}Algorithm}{5}{}
+\contentsline {section}{\numberline {6}Computational approach to air resistance}{6}{}
+\contentsline {subsection}{\numberline {6.1}Change at every time interval}{6}{}
+\contentsline {subsection}{\numberline {6.2}Algorithm}{7}{}
+\contentsline {section}{\numberline {7}Analytical solution to one-dimensional air resistance}{7}{}
+\contentsline {subsection}{\numberline {7.1}Derivation}{7}{}
+\contentsline {subsubsection}{\numberline {7.1.1}Position as a function of time}{7}{}
+\contentsline {subsubsection}{\numberline {7.1.2}Determining the duration of the fall}{8}{}
+\contentsline {subsubsection}{\numberline {7.1.3}Terminal velocity}{8}{}
+\contentsline {subsection}{\numberline {7.2}Plots}{8}{}
+\contentsline {subsubsection}{\numberline {7.2.1}Examples}{8}{}
+\contentsline {subsubsection}{\numberline {7.2.2}Analysis}{9}{}
+\contentsline {section}{\numberline {8}Analytical approximations to two-dimensional air resistance}{9}{}
+\contentsline {subsection}{\numberline {8.1}Introduction}{9}{}
+\contentsline {subsection}{\numberline {8.2}Low Angle Trajectory approximation}{10}{}
+\contentsline {subsubsection}{\numberline {8.2.1}Differential equations of motion}{10}{}
+\contentsline {subsubsection}{\numberline {8.2.2}Velocity}{10}{}
+\contentsline {subsubsection}{\numberline {8.2.3}Position}{10}{}
+\contentsline {subsubsection}{\numberline {8.2.4}Equations of motion}{11}{}
+\contentsline {subsection}{\numberline {8.3}High Angle Trajectory approximation}{11}{}
+\contentsline {subsubsection}{\numberline {8.3.1}Differential equations of motion}{11}{}
+\contentsline {subsubsection}{\numberline {8.3.2}Ascending velocity}{11}{}
+\contentsline {subsubsection}{\numberline {8.3.3}Ascending position}{11}{}
+\contentsline {subsubsection}{\numberline {8.3.4}Descending velocity}{12}{}
+\contentsline {subsubsection}{\numberline {8.3.5}Descending position}{12}{}
+\contentsline {subsubsection}{\numberline {8.3.6}Equations of motion}{13}{}
+\contentsline {subsection}{\numberline {8.4}Split Angle Trajectory approximation}{13}{}
+\contentsline {subsubsection}{\numberline {8.4.1}Differential equations of motion}{13}{}
+\contentsline {subsubsection}{\numberline {8.4.2}Equations of motion}{13}{}
+\contentsline {subsection}{\numberline {8.5}Plots}{13}{}
+\contentsline {subsubsection}{\numberline {8.5.1}Low Angle Trajectory}{13}{}
+\contentsline {subsubsection}{\numberline {8.5.2}High Angle Trajectory}{14}{}
+\contentsline {subsubsection}{\numberline {8.5.3}Split Angle Trajectory}{14}{}
+\contentsline {section}{\numberline {9}Experiment}{14}{}
+\contentsline {subsection}{\numberline {9.1}Setup}{14}{}
+\contentsline {subsection}{\numberline {9.2}Results}{15}{}
+\contentsline {subsection}{\numberline {9.3}Analysis}{15}{}
+\contentsline {section}{\numberline {10}Conculsions}{15}{}
+\contentsline {section}{\numberline {}Further reading}{15}{}
+
 	
 \end{document}
